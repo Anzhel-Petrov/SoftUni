@@ -1,0 +1,15 @@
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\bin\Debug\net6.0\03.SharkTaxonomy.exe
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\bin\Debug\net6.0\03.SharkTaxonomy.deps.json
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\bin\Debug\net6.0\03.SharkTaxonomy.runtimeconfig.json
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\bin\Debug\net6.0\03.SharkTaxonomy.dll
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\bin\Debug\net6.0\03.SharkTaxonomy.pdb
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\03.SharkTaxonomy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\03.SharkTaxonomy.AssemblyInfoInputs.cache
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\03.SharkTaxonomy.AssemblyInfo.cs
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\03.SharkTaxonomy.csproj.CoreCompileInputs.cache
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\03.SharkTaxonomy.sourcelink.json
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\03.SharkTaxonomy.dll
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\refint\03.SharkTaxonomy.dll
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\03.SharkTaxonomy.pdb
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\03.SharkTaxonomy.genruntimeconfig.cache
+C:\Users\Anzhel Petrov\source\repos\SoftUni\C# Advanced\RegularExam\03.SharkTaxonomy\obj\Debug\net6.0\ref\03.SharkTaxonomy.dll
