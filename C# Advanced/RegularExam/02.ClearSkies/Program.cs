@@ -33,7 +33,7 @@
                 }
             }
 
-            while (armor != 0 && enemyCount != 0)
+            while (true)
             {
                 string command = Console.ReadLine();
 
@@ -64,7 +64,6 @@
                         if (enemyCount == 0)
                         {
                             Console.WriteLine("Mission accomplished, you neutralized the aerial threat!");
-                            protectedAirspace[posRow, posCol] = 'J';
                             break;
                         }
                         else
@@ -73,7 +72,6 @@
                             if (armor == 0)
                             {
                                 Console.WriteLine($"Mission failed, your jetfighter was shot down! Last coordinates [{posRow}, {posCol}]!");
-                                protectedAirspace[posRow, posCol] = 'J';
                                 break;
                             }
                         }
@@ -82,9 +80,12 @@
                     {
                         armor = 300;
                     }
+
                     protectedAirspace[posRow, posCol] = '-';
                 }
             }
+
+            protectedAirspace[posRow, posCol] = 'J';
             PrintMatrix(protectedAirspace);
         }
 
