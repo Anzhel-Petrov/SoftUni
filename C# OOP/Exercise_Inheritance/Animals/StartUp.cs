@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 
 namespace Animals
 {
@@ -11,14 +10,17 @@ namespace Animals
         {
             List<Animal> animals = new List<Animal>();
 
-            string input = "";
-            while ((input = Console.ReadLine()) != "Beast!") 
+            string animalType = "";
+            while ((animalType = Console.ReadLine()) != "Beast!") 
             {
-                string animalType = input;
                 string[] animalProperties = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray();
                 string animalName = animalProperties[0];
                 int animalAge = int.Parse(animalProperties[1]);
-                string animalGender = animalType != "Tomcat" ? animalProperties[2] : string.Empty;
+                string animalGender = string.Empty;
+                if (animalProperties.Length > 2)
+                {
+                    animalGender = animalProperties[2];
+                }
 
                 try
                 {

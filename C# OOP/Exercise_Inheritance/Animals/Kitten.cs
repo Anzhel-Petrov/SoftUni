@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Animals
+﻿namespace Animals
 {
     public class Kitten : Cat
     {
-        public Kitten(string name, int age) : base(name, age, "Female")
+        private const string KittenGender = "Female";
+        public Kitten(string name, int age) : base(name, age, KittenGender)
         {
         }
 

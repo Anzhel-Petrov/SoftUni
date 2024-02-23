@@ -8,6 +8,7 @@ namespace Person
 {
     public class Person
     {
+        private int _age;
         public Person(string name, int age)
         {
             Name = name;
@@ -15,7 +16,17 @@ namespace Person
         }
 
         public string Name { get; set; }
-        public int Age { get; set; }
+        public virtual int Age 
+        { 
+            get => _age;
+            set 
+            {
+                if (value < 0)
+                    //_age = 0;
+                    throw new ArgumentException("Age cannot be lower than 0.");
+                else _age = value;
+            }  
+        }
 
         public override string ToString()
         {
