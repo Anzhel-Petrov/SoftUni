@@ -5,9 +5,11 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.SortPeopleByNameAndAge", "01.SortPeopleByNameAndAge\01.SortPeopleByNameAndAge.csproj", "{92F6D13F-0F68-499C-8F13-34C232723C85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.SalaryIncrease", "02.SalaryIncrease\02.SalaryIncrease.csproj", "{999FC7AC-DD1B-4F47-B5E7-3E513847076E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.SalaryIncrease", "02.SalaryIncrease\02.SalaryIncrease.csproj", "{999FC7AC-DD1B-4F47-B5E7-3E513847076E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.ValidationOfData", "03.ValidationOfData\03.ValidationOfData.csproj", "{D27DCFF7-0EB5-4A09-A45D-B199CCDC1976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.ValidationOfData", "03.ValidationOfData\03.ValidationOfData.csproj", "{D27DCFF7-0EB5-4A09-A45D-B199CCDC1976}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.FirstAndReserveTeam", "04.FirstAndReserveTeam\04.FirstAndReserveTeam.csproj", "{8CE566B3-29FA-4B4B-BBFC-DE5B927DF426}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D27DCFF7-0EB5-4A09-A45D-B199CCDC1976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D27DCFF7-0EB5-4A09-A45D-B199CCDC1976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D27DCFF7-0EB5-4A09-A45D-B199CCDC1976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CE566B3-29FA-4B4B-BBFC-DE5B927DF426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CE566B3-29FA-4B4B-BBFC-DE5B927DF426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CE566B3-29FA-4B4B-BBFC-DE5B927DF426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CE566B3-29FA-4B4B-BBFC-DE5B927DF426}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
