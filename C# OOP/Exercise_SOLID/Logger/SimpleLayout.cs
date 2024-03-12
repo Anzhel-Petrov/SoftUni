@@ -4,9 +4,9 @@ namespace Logger
 {
     public class SimpleLayout : ILayout
     {
-        public string Layout(string dateTime, ReportLevels reportLevel, string message)
+        public string Layout(Message message)
         {
-            return $"{dateTime} - {reportLevel} - {message}";
+            return $"{message.DateTime} - {message.LogLevel} - {message.LogMessage}";
         }
     }
 }

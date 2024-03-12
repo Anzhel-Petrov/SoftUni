@@ -1,40 +1,51 @@
 ﻿using Logger.Interfaces;
+using System.Collections.Generic;
 
 namespace Logger
 {
     public class Logger : ILogger
     {
-        private readonly IAppender _appender;
+        private readonly ICollection<IAppender> _appenders = new List<IAppender>();
 
         public Logger(IAppender appender)
         {
-            _appender = appender;
+            _appenders.Add(appender);
+        }
+        public void AddAppender(IAppender appender)
+        {
+            _appenders.Add(appender);
         }
 
-        public void Critical(string dateTime, string message)
+        public void Info(string logMessage)
         {
-            _appender.Append(dateTime, ReportLevels.Critical, message);
+            Log(new Message(LogLevel.Info, logMessage));
+        }
+        public void Warning(string logMessage)
+        {
+            Log(new Message(LogLevel.Warning, logMessage));
         }
 
-        public void Error(string dateTime, string message)
+        public void Error(string logMessage)
         {
-            _appender.Append(dateTime, ReportLevels.Error, message);
+            Log(new Message(LogLevel.Error, logMessage));
+        }
+        public void Critical(string logMessage)
+        {
+            Log(new Message(LogLevel.Critical, logMessage));
         }
 
-        public void Fatal(string dateTime, string message)
+        public void Fatal(string logMessage)
         {
-            _appender.Append(dateTime, ReportLevels.Fatal, message);
+            Log(new Message(LogLevel.Fatal, logMessage));
 
         }
 
-        public void Info(string dateTime, string message)
+        private void Log(Message message)
         {
-            _appender.Append(dateTime, ReportLevels.Info, message);
-        }
-
-        public void Warning(string dateTime, string message)
-        {
-            _appender.Append(dateTime, ReportLevels.Warning, message);
+            foreach (IAppender appender in _appenders)
+            {
+                appender.Append(message);
+            }
         }
     }
 }

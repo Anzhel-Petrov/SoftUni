@@ -2,6 +2,6 @@
 {
     public interface ILogFile
     {
-        void Write(string message);
+        void Write(Message message);
     }
 }

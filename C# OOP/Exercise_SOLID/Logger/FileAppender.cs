@@ -1,22 +1,36 @@
 ﻿using Logger.Interfaces;
 using System;
+using System.IO;
 
 namespace Logger
 {
     public class FileAppender : IAppender
     {
         private readonly ILayout _layout;
-        private readonly ILogFile _logFile;
+        public string FilePath { get; set; } = $"..\\..\\..\\{DateTime.Now:yyyyMMddhhmmss}.txt";
 
-        public FileAppender(ILayout layout, ILogFile logfile)
+        public FileAppender(ILayout layout)
         {
             _layout = layout;
-            _logFile = logfile;
         }
-        public void Append(string dateTime, ReportLevels reportLevel, string message)
+
+        public FileAppender(ILayout layout, string filePath)
+            : this(layout)
         {
-            Console.WriteLine(_layout.Layout(dateTime, reportLevel, message));
-            _logFile.Write(message);
+            FilePath = filePath;
+        }
+
+        public void Append(Message message)
+        {
+            string formattedLogEntry = _layout.Layout(message);
+            try
+            {
+                File.AppendAllText(FilePath, formattedLogEntry + Environment.NewLine);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

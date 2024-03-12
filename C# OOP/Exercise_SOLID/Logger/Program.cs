@@ -7,22 +7,18 @@ namespace Logger
         static void Main(string[] args)
         {
             ILayout simpleLayout = new SimpleLayout();
+            ILayout xmlLayout = new XmlLayout();
 
-            IAppender consoleAppender = new ConsoleAppender(simpleLayout);
+            IAppender consoleAppender = new ConsoleAppender(xmlLayout);
+            IAppender fileAppender = new FileAppender(simpleLayout);
 
-            ILogger logger = new Logger(consoleAppender);
+            ILogger logger = new Logger(fileAppender);
+            logger.AddAppender(consoleAppender);
 
-            logger.Error("3/26/2015 2:08:11 PM", "Error parsing JSON.");
-
-            logger.Info("3/26/2015 2:08:11 PM", "User Pesho successfully registered.");
-
-            var file = new LogFile();
-
-            var fileAppender = new FileAppender(simpleLayout, file);
-
-            logger.Error("3/26/2015 2:08:11 PM", "Error parsing JSON.");
-
-            logger.Info("3/26/2015 2:08:11 PM", "User Pesho successfully registered.");
+            logger.Error("Error parsing JSON.");
+            logger.Info("User Pesho successfully registered.");
+            logger.Error("Error parsing JSON.");
+            logger.Info("User Pesho successfully registered.");
         }
     }
 }

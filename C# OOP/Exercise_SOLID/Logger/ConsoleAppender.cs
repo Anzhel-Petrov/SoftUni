@@ -12,9 +12,9 @@ namespace Logger
             _layout = layout;
         }
 
-        public void Append(string dateTime, ReportLevels reportLevel, string message)
+        public void Append(Message message)
         {
-            Console.WriteLine(_layout.Layout(dateTime, reportLevel, message));
+            Console.WriteLine(_layout.Layout(message));
         }
     }
 }
