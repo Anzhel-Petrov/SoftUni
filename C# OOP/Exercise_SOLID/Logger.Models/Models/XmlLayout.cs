@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace Logger
 {
-    internal class XmlLayout : ILayout
+    public class XmlLayout : ILayout
     {
         public string Layout(Message message)
         {
