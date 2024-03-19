@@ -1,6 +1,5 @@
-﻿using Logger.Interfaces;
-using System;
-using System.IO;
+﻿using Logger.Models.Interfaces;
+using Logger.Models.Models;
 
 namespace Logger
 {

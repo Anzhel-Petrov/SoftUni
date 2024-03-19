@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Logger.Interfaces
+﻿namespace Logger.Models.Interfaces
 {
     public interface ILogger
     {

@@ -1,4 +1,5 @@
-﻿using Logger.Interfaces;
+﻿using Logger.Models.Interfaces;
+using Logger.Models.Models;
 
 namespace Logger
 {
@@ -9,8 +10,8 @@ namespace Logger
             ILayout simpleLayout = new SimpleLayout();
             ILayout xmlLayout = new XmlLayout();
 
-            IAppender consoleAppender = new ConsoleAppender(xmlLayout);
-            IAppender fileAppender = new FileAppender(simpleLayout);
+            IAppender consoleAppender = new ConsoleAppender(simpleLayout);
+            IAppender fileAppender = new FileAppender(xmlLayout);
 
             ILogger logger = new Logger(fileAppender);
             logger.AddAppender(consoleAppender);

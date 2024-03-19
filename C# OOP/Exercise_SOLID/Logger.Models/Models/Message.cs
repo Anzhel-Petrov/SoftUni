@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Logger
+﻿namespace Logger.Models.Models
 {
     public class Message
     {

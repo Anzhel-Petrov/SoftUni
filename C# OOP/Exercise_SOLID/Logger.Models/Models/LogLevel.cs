@@ -1,4 +1,4 @@
-﻿namespace Logger
+﻿namespace Logger.Models.Models
 {
     public enum LogLevel
     {

@@ -1,4 +1,5 @@
-﻿using Logger.Interfaces;
+﻿using Logger.Models.Interfaces;
+using Logger.Models.Models;
 using System.Xml.Linq;
 
 namespace Logger

@@ -1,4 +1,6 @@
-﻿namespace Logger.Interfaces
+﻿using Logger.Models.Models;
+
+namespace Logger.Models.Interfaces
 {
     public interface IAppender
     {

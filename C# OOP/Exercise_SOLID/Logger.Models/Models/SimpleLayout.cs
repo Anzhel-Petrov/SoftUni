@@ -1,6 +1,6 @@
-﻿using Logger.Interfaces;
+﻿using Logger.Models.Interfaces;
 
-namespace Logger
+namespace Logger.Models.Models
 {
     public class SimpleLayout : ILayout
     {
