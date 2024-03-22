@@ -12,14 +12,16 @@ namespace Logger
 
             IAppender consoleAppender = new ConsoleAppender(simpleLayout);
             IAppender fileAppender = new FileAppender(xmlLayout);
+            consoleAppender.LogLevel = LogLevel.Error;
 
             ILogger logger = new Logger(fileAppender);
             logger.AddAppender(consoleAppender);
 
-            logger.Error("Error parsing JSON.");
-            logger.Info("User Pesho successfully registered.");
-            logger.Error("Error parsing JSON.");
-            logger.Info("User Pesho successfully registered.");
+            logger.Info("Everything seems fine");
+            logger.Warning("Warning: ping is too high - disconnect imminent");
+            logger.Error("Error parsing request");
+            logger.Critical("No connection string found in App.config");
+            logger.Fatal("mscorlib.dll does not respond");
         }
     }
 }

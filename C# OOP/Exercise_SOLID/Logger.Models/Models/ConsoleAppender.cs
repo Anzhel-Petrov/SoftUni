@@ -11,6 +11,8 @@ namespace Logger.Models.Models
             _layout = layout;
         }
 
+        public LogLevel LogLevel { get; set; }
+
         public void Append(Message message)
         {
             Console.WriteLine(_layout.Layout(message));

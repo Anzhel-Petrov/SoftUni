@@ -7,6 +7,7 @@ namespace Logger
     {
         private readonly ILayout _layout;
         public string FilePath { get; set; } = $"..\\..\\..\\{DateTime.Now:yyyyMMddhhmmss}.txt";
+        public LogLevel LogLevel { get; set; }
 
         public FileAppender(ILayout layout)
         {

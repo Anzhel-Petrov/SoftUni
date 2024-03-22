@@ -44,7 +44,10 @@ namespace Logger
         {
             foreach (IAppender appender in _appenders)
             {
-                appender.Append(message);
+                if (message.LogLevel >= appender.LogLevel)
+                {
+                    appender.Append(message);
+                }
             }
         }
     }
