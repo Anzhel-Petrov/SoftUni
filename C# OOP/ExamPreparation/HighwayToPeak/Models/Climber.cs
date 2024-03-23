@@ -17,6 +17,7 @@ namespace HighwayToPeak_.Models
         {
             Name = name;
             Stamina = stamina;
+            _conqueredPeaks = new List<string>();
         }
 
         public string Name 
@@ -35,7 +36,7 @@ namespace HighwayToPeak_.Models
         public int Stamina 
         {
             get => _stamina;
-            set
+            protected set
             {
                 if (value < minStamina)
                 {
@@ -51,6 +52,7 @@ namespace HighwayToPeak_.Models
                 }
             }
         }
+        public abstract bool IsOxygenUsed { get; }
 
         public IReadOnlyCollection<string> ConqueredPeaks => _conqueredPeaks.AsReadOnly();
 
@@ -77,5 +79,12 @@ namespace HighwayToPeak_.Models
         }
 
         public abstract void Rest(int daysCount);
+
+        public override string ToString()
+        {
+            return $"{this.GetType().Name} - Name: {Name}, Stamina: {Stamina}" + 
+            Environment.NewLine + 
+            (_conqueredPeaks.Count == 0 ? "Peaks conquered: no peaks conquered" : $"Peaks conquered: {_conqueredPeaks.Count}");
+        }
     }
 }

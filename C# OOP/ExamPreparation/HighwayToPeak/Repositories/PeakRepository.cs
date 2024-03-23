@@ -9,6 +9,11 @@ namespace HighwayToPeak_.Repositories
     {
         private readonly List<IPeak> _peaks;
 
+        public PeakRepository()
+        {
+            _peaks = new List<IPeak>();
+        }
+
         public IReadOnlyCollection<IPeak> All => _peaks.AsReadOnly();
 
         public void Add(IPeak model)

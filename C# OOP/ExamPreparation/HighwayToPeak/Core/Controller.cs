@@ -5,20 +5,21 @@ using HighwayToPeak_.Models;
 using HighwayToPeak_.Models.Enums;
 using HighwayToPeak_.Repositories;
 using System;
+using System.Linq;
+using System.Text;
 
 namespace HighwayToPeak_.Core
 {
     public class Controller : IController
     {
         private IRepository<IPeak> _peakRepository;
-        public Controller(IRepository<IPeak> peakRepository)
+        private IRepository<IClimber> _climberRepository;
+        private IBaseCamp _baseCamp;
+        public Controller()
         {
-            _peakRepository = peakRepository;
-        }
-
-        public Controller() : base()
-        {
-            
+            this._peakRepository = new PeakRepository();
+            this._climberRepository = new ClimberRepository();
+            this._baseCamp = new BaseCamp();
         }
 
         public string AddPeak(string name, int elevation, string difficultyLevel)
@@ -42,27 +43,119 @@ namespace HighwayToPeak_.Core
 
         public string AttackPeak(string climberName, string peakName)
         {
-            throw new System.NotImplementedException();
+            IClimber climber = _climberRepository.Get(climberName);
+            IPeak peak = _peakRepository.Get(peakName);
+
+            if (peak is null)
+            {
+                throw new ArgumentException($"{peakName} is not allowed for international climbing.");
+            }
+
+            if (climber is null)
+            {
+                throw new ArgumentException($"Climber - {climberName}, has not arrived at the BaseCamp yet.");
+            }
+
+            if (!_baseCamp.Residents.Contains(climberName))
+            {
+                throw new ArgumentException($"{climberName} not found for gearing and instructions. The attack of {peakName} will be postponed.");
+            }
+
+            Enum.TryParse(peak.DifficultyLevel, out DifficultyLevel difficultyLevel);
+            if (difficultyLevel == DifficultyLevel.Extreme && climber.GetType().Name == "NaturalClimber")
+            {
+                throw new ArgumentException($"{climberName} does not cover the requirements for climbing {peakName}.");
+            }
+
+            _baseCamp.LeaveCamp(climberName);
+            climber.Climb(peak);
+
+            if (climber.Stamina == 0)
+            {
+                return $"{climberName} did not return to BaseCamp.";
+            }
+            else
+            {
+                _baseCamp.ArriveAtCamp(climber.Name);
+                return $"{climberName} successfully conquered {peakName} and returned to BaseCamp.";
+            }
+
         }
 
         public string BaseCampReport()
         {
-            throw new System.NotImplementedException();
+            if (_baseCamp.Residents.Count > 0)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine("BaseCamp residents:");
+
+                foreach (IClimber climber in _climberRepository.All.Where(x => _baseCamp.Residents.Contains(x.Name)).OrderBy(x => x.Name))
+                {
+                    sb.AppendLine($"Name: {climber.Name}, Stamina: {climber.Stamina}, Count of Conquered Peaks: {climber.ConqueredPeaks.Count}");
+                }
+
+                return sb.ToString().Trim();
+            }
+            else
+            {
+                return "BaseCamp is currently empty.";
+            }
         }
 
         public string CampRecovery(string climberName, int daysToRecover)
         {
-            throw new System.NotImplementedException();
+            IClimber climber = _climberRepository.Get(climberName);
+
+            if (climber is null)
+            {
+                return $"Climber - {climberName}, has not arrived at the BaseCamp yet.";
+            }
+
+            if (!_baseCamp.Residents.Contains(climberName))
+            {
+                return $"{climberName} not found at the BaseCamp.";
+            }
+
+            if (climber.Stamina < 10)
+            {
+                climber.Rest(daysToRecover);
+                return $"{climberName} has been recovering for {daysToRecover} days and is ready to attack the mountain.";
+            }
+            else
+            {
+                return $"{climberName} has no need of recovery.";
+            }
         }
 
         public string NewClimberAtCamp(string name, bool isOxygenUsed)
         {
-            throw new System.NotImplementedException();
+            if (_climberRepository.Get(name) is not null)
+            {
+                throw new ArgumentException($"{name} is a participant in {this.GetType().Name} and cannot be duplicated.");
+            }
+
+            IClimber climber = isOxygenUsed ? new OxygenClimber(name) : new NaturalClimber(name);
+
+            _climberRepository.Add(climber);
+            _baseCamp.ArriveAtCamp(name);
+
+            return $"{name} has arrived at the BaseCamp and will wait for the best conditions.";
         }
 
         public string OverallStatistics()
         {
-            throw new System.NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("***Highway-To-Peak***");
+            foreach (IClimber climber in _climberRepository.All.OrderByDescending(x => x.ConqueredPeaks.Count).ThenBy(x => x.Name))
+            {
+                sb.AppendLine(climber.ToString());
+                foreach (string peakName in climber.ConqueredPeaks)
+                {
+                    sb.AppendLine(_peakRepository.Get(peakName).ToString());
+                }
+            }
+
+            return sb.ToString().Trim();
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using HighwayToPeak.Models.Contracts;
-using HighwayToPeak.Repositories.Contracts;
-using System.Xml.Linq;
 using System;
 
 namespace HighwayToPeak_.Models
