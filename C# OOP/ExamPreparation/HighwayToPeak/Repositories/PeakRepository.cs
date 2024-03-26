@@ -3,7 +3,7 @@ using HighwayToPeak.Repositories.Contracts;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HighwayToPeak_.Repositories
+namespace HighwayToPeak.Repositories
 {
     public class PeakRepository : IRepository<IPeak>
     {

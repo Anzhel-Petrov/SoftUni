@@ -1,9 +1,9 @@
 ﻿using HighwayToPeak.Models.Contracts;
-using HighwayToPeak_.Models.Enums;
+using HighwayToPeak.Models.Enums;
 using System;
 using System.Collections.Generic;
 
-namespace HighwayToPeak_.Models
+namespace HighwayToPeak.Models
 {
     public abstract class Climber : IClimber
     {
@@ -23,7 +23,7 @@ namespace HighwayToPeak_.Models
         public string Name 
         {
             get => _name;
-            set
+            private set
             {
                 if (string.IsNullOrEmpty(value))
                 {
@@ -52,7 +52,6 @@ namespace HighwayToPeak_.Models
                 }
             }
         }
-        public abstract bool IsOxygenUsed { get; }
 
         public IReadOnlyCollection<string> ConqueredPeaks => _conqueredPeaks.AsReadOnly();
 

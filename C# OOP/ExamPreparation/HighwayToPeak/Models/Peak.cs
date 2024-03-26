@@ -1,7 +1,7 @@
 ﻿using HighwayToPeak.Models.Contracts;
 using System;
 
-namespace HighwayToPeak_.Models
+namespace HighwayToPeak.Models
 {
     public class Peak : IPeak
     {
@@ -17,7 +17,7 @@ namespace HighwayToPeak_.Models
         public string Name 
         {
             get => _name;
-            set
+            private set
             {
                 if (string.IsNullOrEmpty(value))
                 {
@@ -30,7 +30,7 @@ namespace HighwayToPeak_.Models
         public int Elevation 
         {
             get => _elevation;
-            set
+            private set
             {
                 if (value < 0)
                 {
@@ -40,7 +40,7 @@ namespace HighwayToPeak_.Models
             }
         }
 
-        public string DifficultyLevel { get; }
+        public string DifficultyLevel { get; private set; }
 
         public override string ToString()
         {

@@ -1,14 +1,14 @@
 ﻿using HighwayToPeak.Core.Contracts;
 using HighwayToPeak.Models.Contracts;
 using HighwayToPeak.Repositories.Contracts;
-using HighwayToPeak_.Models;
-using HighwayToPeak_.Models.Enums;
-using HighwayToPeak_.Repositories;
+using HighwayToPeak.Models;
+using HighwayToPeak.Models.Enums;
+using HighwayToPeak.Repositories;
 using System;
 using System.Linq;
 using System.Text;
 
-namespace HighwayToPeak_.Core
+namespace HighwayToPeak.Core
 {
     public class Controller : IController
     {
@@ -29,7 +29,7 @@ namespace HighwayToPeak_.Core
                 throw new ArgumentException($"{name} is already added as a valid mountain destination.");
             }
 
-            if (!Enum.TryParse(difficultyLevel, out DifficultyLevel validDifficultyLevel))
+            if (!Enum.TryParse(difficultyLevel, out DifficultyLevel _))
             {
                 throw new ArgumentException($"{difficultyLevel} peaks are not allowed for international climbers.");
             }
@@ -106,11 +106,6 @@ namespace HighwayToPeak_.Core
         {
             IClimber climber = _climberRepository.Get(climberName);
 
-            if (climber is null)
-            {
-                return $"Climber - {climberName}, has not arrived at the BaseCamp yet.";
-            }
-
             if (!_baseCamp.Residents.Contains(climberName))
             {
                 return $"{climberName} not found at the BaseCamp.";
@@ -131,7 +126,7 @@ namespace HighwayToPeak_.Core
         {
             if (_climberRepository.Get(name) is not null)
             {
-                throw new ArgumentException($"{name} is a participant in {this.GetType().Name} and cannot be duplicated.");
+                throw new ArgumentException($"{name} is a participant in {_climberRepository.GetType().Name} and cannot be duplicated.");
             }
 
             IClimber climber = isOxygenUsed ? new OxygenClimber(name) : new NaturalClimber(name);
@@ -149,9 +144,9 @@ namespace HighwayToPeak_.Core
             foreach (IClimber climber in _climberRepository.All.OrderByDescending(x => x.ConqueredPeaks.Count).ThenBy(x => x.Name))
             {
                 sb.AppendLine(climber.ToString());
-                foreach (string peakName in climber.ConqueredPeaks)
+                foreach (IPeak peak in _peakRepository.All.Where(x => climber.ConqueredPeaks.Contains(x.Name)))
                 {
-                    sb.AppendLine(_peakRepository.Get(peakName).ToString());
+                    sb.AppendLine(peak.ToString());
                 }
             }
 

@@ -1,12 +1,13 @@
 ﻿using HighwayToPeak.Models.Contracts;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace HighwayToPeak_.Models
+namespace HighwayToPeak.Models
 {
     public class BaseCamp : IBaseCamp
     {
         private readonly List<string> _residents = new List<string>();
-        public IReadOnlyCollection<string> Residents => _residents.AsReadOnly();
+        public IReadOnlyCollection<string> Residents => _residents.AsReadOnly().OrderBy(x => x).ToList();
 
         public void ArriveAtCamp(string climberName)
         {

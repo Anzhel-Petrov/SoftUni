@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HighwayToPeak_.Repositories
+namespace HighwayToPeak.Repositories
 {
     public class ClimberRepository : IRepository<IClimber>
     {

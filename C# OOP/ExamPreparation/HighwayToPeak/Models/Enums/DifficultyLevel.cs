@@ -1,4 +1,4 @@
-﻿namespace HighwayToPeak_.Models.Enums
+﻿namespace HighwayToPeak.Models.Enums
 {
     public enum DifficultyLevel
     {
