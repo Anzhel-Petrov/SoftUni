@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HighwayToPeak", "HighwayToPeak\HighwayToPeak.csproj", "{125CF1C9-6940-4E5A-87DC-BAD09A21F61F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NauticalCatchChallenge", "NauticalCatchChallenge\NauticalCatchChallenge.csproj", "{56F723EF-787A-40B2-B403-B41EED1F2BCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NauticalCatchChallenge", "NauticalCatchChallenge\NauticalCatchChallenge.csproj", "{56F723EF-787A-40B2-B403-B41EED1F2BCD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NauticalCatchChallenge_BusinessLogic", "NauticalCatchChallenge_BusinessLogic\NauticalCatchChallenge_BusinessLogic.csproj", "{B0790D90-7828-478D-A035-5B984C61630D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{56F723EF-787A-40B2-B403-B41EED1F2BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56F723EF-787A-40B2-B403-B41EED1F2BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56F723EF-787A-40B2-B403-B41EED1F2BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0790D90-7828-478D-A035-5B984C61630D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0790D90-7828-478D-A035-5B984C61630D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0790D90-7828-478D-A035-5B984C61630D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0790D90-7828-478D-A035-5B984C61630D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

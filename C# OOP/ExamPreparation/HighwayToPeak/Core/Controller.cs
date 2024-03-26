@@ -62,7 +62,7 @@ namespace HighwayToPeak.Core
             }
 
             Enum.TryParse(peak.DifficultyLevel, out DifficultyLevel difficultyLevel);
-            if (difficultyLevel == DifficultyLevel.Extreme && climber.GetType().Name == "NaturalClimber")
+            if (difficultyLevel == DifficultyLevel.Extreme && climber.GetType().Name == nameof(NaturalClimber))
             {
                 throw new ArgumentException($"{climberName} does not cover the requirements for climbing {peakName}.");
             }
