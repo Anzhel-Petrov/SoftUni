@@ -9,6 +9,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NauticalCatchChallenge", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NauticalCatchChallenge_BusinessLogic", "NauticalCatchChallenge_BusinessLogic\NauticalCatchChallenge_BusinessLogic.csproj", "{B0790D90-7828-478D-A035-5B984C61630D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Railway", "Railway\Railway.csproj", "{52D4383F-AA34-4F8C-AC20-6DE0C2BD6EF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Railway.Tests", "Railway.Tests\Railway.Tests.csproj", "{E70D617B-66A5-49C5-A9A3-8556DB5D5FC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{F6FAEA02-E8D1-4CB1-AE33-F1BE7686C245}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Television", "Television\Television.csproj", "{C7B0089F-48E2-468A-85FE-4B7F9C2EF48C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Television.Tests", "Television.Tests\Television.Tests.csproj", "{9F68197E-0422-453C-A7E4-5AD6C3D84910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +37,31 @@ Global
 		{B0790D90-7828-478D-A035-5B984C61630D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0790D90-7828-478D-A035-5B984C61630D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0790D90-7828-478D-A035-5B984C61630D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52D4383F-AA34-4F8C-AC20-6DE0C2BD6EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D4383F-AA34-4F8C-AC20-6DE0C2BD6EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D4383F-AA34-4F8C-AC20-6DE0C2BD6EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D4383F-AA34-4F8C-AC20-6DE0C2BD6EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E70D617B-66A5-49C5-A9A3-8556DB5D5FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E70D617B-66A5-49C5-A9A3-8556DB5D5FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E70D617B-66A5-49C5-A9A3-8556DB5D5FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E70D617B-66A5-49C5-A9A3-8556DB5D5FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B0089F-48E2-468A-85FE-4B7F9C2EF48C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B0089F-48E2-468A-85FE-4B7F9C2EF48C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B0089F-48E2-468A-85FE-4B7F9C2EF48C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B0089F-48E2-468A-85FE-4B7F9C2EF48C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F68197E-0422-453C-A7E4-5AD6C3D84910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F68197E-0422-453C-A7E4-5AD6C3D84910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F68197E-0422-453C-A7E4-5AD6C3D84910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F68197E-0422-453C-A7E4-5AD6C3D84910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52D4383F-AA34-4F8C-AC20-6DE0C2BD6EF1} = {F6FAEA02-E8D1-4CB1-AE33-F1BE7686C245}
+		{E70D617B-66A5-49C5-A9A3-8556DB5D5FC3} = {F6FAEA02-E8D1-4CB1-AE33-F1BE7686C245}
+		{C7B0089F-48E2-468A-85FE-4B7F9C2EF48C} = {F6FAEA02-E8D1-4CB1-AE33-F1BE7686C245}
+		{9F68197E-0422-453C-A7E4-5AD6C3D84910} = {F6FAEA02-E8D1-4CB1-AE33-F1BE7686C245}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {05437DF1-F716-4A92-8094-B8F9DA5CEDD9}
