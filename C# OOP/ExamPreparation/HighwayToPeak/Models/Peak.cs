@@ -40,7 +40,7 @@ namespace HighwayToPeak.Models
             }
         }
 
-        public string DifficultyLevel { get; private set; }
+        public string DifficultyLevel { get; }
 
         public override string ToString()
         {
