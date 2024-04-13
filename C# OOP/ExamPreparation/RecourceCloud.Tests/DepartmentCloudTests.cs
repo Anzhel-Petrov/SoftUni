@@ -1,12 +1,6 @@
-using NUnit.Framework;
-using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Xml.Linq;
-
 namespace RecourceCloud.Tests
 {
-    public class Tests
+    public class DepartmentCloudTests
     {
         private DepartmentCloud departmentCloud;
         [SetUp]

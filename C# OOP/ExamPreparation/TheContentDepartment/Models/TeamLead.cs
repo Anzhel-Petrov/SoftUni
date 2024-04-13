@@ -20,7 +20,6 @@ public class TeamLead : TeamMember
             {
                 throw new ArgumentException(string.Format(ExceptionMessages.PathIncorrect, value));
             }
-
             _path = value;
         }
     }

@@ -24,7 +24,6 @@ public abstract class TeamMember : ITeamMember
             {
                 throw new ArgumentException(ExceptionMessages.NameNullOrWhiteSpace);
             }
-
             _name = value;
         }
     }

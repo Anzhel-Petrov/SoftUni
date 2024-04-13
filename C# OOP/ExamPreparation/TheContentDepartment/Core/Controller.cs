@@ -85,7 +85,7 @@ public class Controller : IController
     public string LogTesting(string memberName)
     {
         ITeamMember member = _teamMemberRepository.TakeOne(memberName);
-        ITeamMember teamLead= _teamMemberRepository.Models.Where(t => t.GetType().Name == nameof(TeamLead)).FirstOrDefault();
+        ITeamMember teamLead= _teamMemberRepository.Models.FirstOrDefault(t => t.GetType().Name == nameof(TeamLead))!;
         
         if (member is null)
         {
@@ -111,11 +111,11 @@ public class Controller : IController
 
     public string ApproveResource(string resourceName, bool isApprovedByTeamLead)
     {
-        IResource resource = _resourceRepository.TakeOne(resourceName);
-        ITeamMember teamLead = _teamMemberRepository.Models.FirstOrDefault(p => p.Path == "Master");
+        IResource? resource = _resourceRepository.TakeOne(resourceName);
+        ITeamMember teamLead= _teamMemberRepository.Models.FirstOrDefault(t => t.GetType().Name == nameof(TeamLead))!;
+        
         if (resource.IsTested)
         {
-            
             if (isApprovedByTeamLead)
             {
                 resource.Approve();
@@ -134,16 +134,19 @@ public class Controller : IController
     {
         StringBuilder sb = new StringBuilder();
         sb.AppendLine("Finished Tasks:");
-        foreach (IResource resource in _resourceRepository.Models.Where(r => r.IsApproved))
+        
+        foreach (IResource? resource in _resourceRepository.Models.Where(r => r.IsApproved))
         {
-            sb.AppendLine($"--{resource.ToString().Trim()}");
+            sb.AppendLine($"--{resource.ToString()?.Trim()}");
         }
+        
         sb.AppendLine("Team Report:");
-        ITeamMember teamLead = _teamMemberRepository.Models.FirstOrDefault(p => p.Path == "Master");
-        sb.AppendLine($"--{teamLead.ToString().Trim()}");
+        ITeamMember teamLead= _teamMemberRepository.Models.FirstOrDefault(t => t.GetType().Name == nameof(TeamLead))!;
+        sb.AppendLine($"--{teamLead.ToString()!.Trim()}");
+        
         foreach (ITeamMember teamMember in _teamMemberRepository.Models.Where(t => t.Path != "Master"))
         {
-            sb.AppendLine($"{teamMember.ToString().Trim()}");
+            sb.AppendLine($"{teamMember.ToString()?.Trim()}");
         }
 
         return sb.ToString().Trim();

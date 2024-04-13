@@ -25,11 +25,10 @@ public abstract class Resource : IResource
         get => _name;
         private set
         {
-            if (string.IsNullOrEmpty(value))
+            if (string.IsNullOrWhiteSpace(value))
             {
                 throw new ArgumentException(ExceptionMessages.NameNullOrWhiteSpace);
             }
-
             _name = value;
         }
     }
