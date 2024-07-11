@@ -1,7 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Net.Http.Json;
-using System.Reflection.Metadata;
-using System.Text.Json.Serialization;
 using Newtonsoft.Json;
 using ProductShop.Data;
 using ProductShop.Models;
@@ -137,14 +134,14 @@ namespace ProductShop
         public static string GetUsersWithProducts(ProductShopContext context)
         {
             var usersWithSoldProducts = context.Users
-                .Where(u => u.ProductsSold.Any(ps => ps.BuyerId.HasValue && ps.Price != null))
+                .Where(u => u.ProductsSold.Any(ps => ps.BuyerId.HasValue))
                 .Select(u => new
                 {
                     firstName = u.FirstName,
                     lastName = u.LastName,
                     age = u.Age,
                     soldProducts = u.ProductsSold
-                        .Where(ps => ps.BuyerId.HasValue && ps.Price != null)
+                        .Where(ps => ps.BuyerId.HasValue)
                         .Select(ps => new
                         {
                             name = ps.Name,
@@ -155,16 +152,23 @@ namespace ProductShop
                 .OrderByDescending(u => u.soldProducts.Count())
                 .AsEnumerable();
 
-            //var output = new
-            //{
-            //    userCount = usersWithSoldProducts.Count(),
-            //    users = usersWithSoldProducts.Select(u => new
-            //    {
-            //        u.firstName
-            //    })
-            //};
+            var output = new
+            {
+                usersCount = usersWithSoldProducts.Count(),
+                users = usersWithSoldProducts.Select(u => new
+                {
+                    u.firstName,
+                    u.lastName,
+                    u.age,
+                    soldProducts = new
+                    {
+                        count = u.soldProducts.Count(),
+                        products = u.soldProducts
+                    }
+                })
+            };
 
-            var json = JsonConvert.SerializeObject(usersWithSoldProducts, Formatting.Indented);
+            var json = JsonConvert.SerializeObject(output, new JsonSerializerSettings{ Formatting = Formatting.Indented, NullValueHandling = NullValueHandling.Ignore });
 
             return json;
         }
