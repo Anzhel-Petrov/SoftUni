@@ -42,10 +42,12 @@ namespace CarDealer
 
         public static string ImportSuppliers(CarDealerContext context, string inputXml)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(ImportSupplierDto[]), new XmlRootAttribute("Suppliers"));
-
-            using StringReader reader = new StringReader(inputXml);
-            ImportSupplierDto[] importSupplierDtOs = (ImportSupplierDto[])serializer.Deserialize(reader)!;
+            // XmlSerializer serializer = new XmlSerializer(typeof(ImportSupplierDto[]), new XmlRootAttribute("Suppliers"));
+            //
+            // using StringReader reader = new StringReader(inputXml);
+            // ImportSupplierDto[] importSupplierDtOs = (ImportSupplierDto[])serializer.Deserialize(reader)!;
+            
+            ImportSupplierDto[] importSupplierDtOs = DeserializeXml<ImportSupplierDto[]>(inputXml, "Suppliers");
 
             Mapper mapper = GetMapper();
             Supplier[] suppliers = mapper.Map<Supplier[]>(importSupplierDtOs);
@@ -273,10 +275,20 @@ namespace CarDealer
 
         public static string GetSalesWithAppliedDiscount(CarDealerContext context)
         {
+            return "";
+        }
+        
+        public static T DeserializeXml<T>(string inputXml, string rootName)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(T), new XmlRootAttribute(rootName));
 
+            using StringReader reader = new StringReader(inputXml);
+            T objectDto = (T)serializer.Deserialize(reader)!;
+
+            return objectDto;
         }
 
-        private static string SerializeToXml<T>(T dto, string xmlRootAttribute, bool omitDeclaration = false)
+        private static string SerializeToXml<T>(T dto, string xmlRootAttribute, bool omitXmlDeclaration = false, bool indent = true)
         {
             XmlSerializer xmlSerializer =
                 new XmlSerializer(typeof(T), new XmlRootAttribute(xmlRootAttribute));
@@ -285,9 +297,9 @@ namespace CarDealer
 
             XmlWriterSettings settings = new XmlWriterSettings()
             {
-                OmitXmlDeclaration = omitDeclaration,
+                OmitXmlDeclaration = omitXmlDeclaration,
                 Encoding = new UTF8Encoding(false),
-                Indent = true
+                Indent = indent
             };
 
             using (StringWriter stringWriter = new StringWriter(stringBuilder, CultureInfo.InvariantCulture))

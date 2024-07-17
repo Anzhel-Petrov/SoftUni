@@ -1,6 +1,5 @@
 ﻿using Invoices.Data.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 namespace Invoices.Data
 {
