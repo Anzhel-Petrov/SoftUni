@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Globalization;
 using System.Text;
 using Invoices.Data;
 using Invoices.Data.Models;
@@ -81,6 +82,12 @@ namespace Invoices.DataProcessor
             foreach (var invoice in invoices)
             {
                 if (!IsValid(invoice) || invoice.DueDate < invoice.IssueDate)
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+                
+                if (invoice.DueDate == DateTime.ParseExact("01/01/0001", "dd/MM/yyyy", CultureInfo.InvariantCulture) || invoice.IssueDate == DateTime.ParseExact("01/01/0001", "dd/MM/yyyy", CultureInfo.InvariantCulture))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
