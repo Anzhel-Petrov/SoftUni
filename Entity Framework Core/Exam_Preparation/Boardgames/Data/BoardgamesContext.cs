@@ -30,9 +30,9 @@ namespace Boardgames.Data
                 .HasKey(bs => new {bs.BoardgameId, bs.SellerId});
         }
 
-        public DbSet<Boardgame> Boardgames { get; set; }
-        public DbSet<BoardgameSeller> BoardgamesSellers { get; set; }
-        public DbSet<Creator> Creators { get; set; }
-        public DbSet<Seller> Sellers { get; set; }
+        public DbSet<Boardgame> Boardgames { get; set; } = null!;
+        public DbSet<BoardgameSeller> BoardgamesSellers { get; set; } = null!;
+        public DbSet<Creator> Creators { get; set; } = null!;
+        public DbSet<Seller> Sellers { get; set; } = null!;
     }
 }

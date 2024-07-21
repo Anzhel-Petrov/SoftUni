@@ -1,6 +1,6 @@
 ﻿using Invoices.DataProcessor.ExportDto;
 using Invoices.DataProcessor.ExportDto.JSON;
-using Invoices.Extensions;
+using JSON_XML_Extensions;
 
 namespace Invoices.DataProcessor
 {
@@ -33,7 +33,7 @@ namespace Invoices.DataProcessor
                 .ThenBy(c => c.ClientName)
                 .ToArray();
 
-            return clients.SerializeToXmlStream("Clients");
+            return clients.SerializeToXml("Clients");
         }
 
         public static string ExportProductsWithMostClients(InvoicesContext context, int nameLength)

@@ -1,8 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoices", "Invoices\Invoices.csproj", "{08FB7D9B-10E8-416F-ADCC-3E4D58C0E204}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoices", "Invoices\Invoices.csproj", "{08FB7D9B-10E8-416F-ADCC-3E4D58C0E204}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boardgames", "Boardgames\Boardgames.csproj", "{F6A1C681-A194-4A6D-A92F-0C23BDBBE234}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Boardgames", "Boardgames\Boardgames.csproj", "{F6A1C681-A194-4A6D-A92F-0C23BDBBE234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_XML_Extensions", "JSON_XML_Extensions\JSON_XML_Extensions.csproj", "{08B688EE-6607-4C96-9DAF-78D11C5EF7E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +23,12 @@ Global
 		{F6A1C681-A194-4A6D-A92F-0C23BDBBE234}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6A1C681-A194-4A6D-A92F-0C23BDBBE234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6A1C681-A194-4A6D-A92F-0C23BDBBE234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B688EE-6607-4C96-9DAF-78D11C5EF7E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B688EE-6607-4C96-9DAF-78D11C5EF7E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B688EE-6607-4C96-9DAF-78D11C5EF7E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B688EE-6607-4C96-9DAF-78D11C5EF7E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

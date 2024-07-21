@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Invoices.Extensions;
+namespace JSON_XML_Extensions;
 
 public static class JsonSerializationExtension
 {

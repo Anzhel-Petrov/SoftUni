@@ -9,7 +9,7 @@ public class Boardgame
     [Key]
     public int Id { get; set; }
     [Required]
-    [MinLength(20)]
+    [MinLength(10)]
     [MaxLength(20)]
     public string Name { get; set; } = null!;
     [Required]
@@ -19,6 +19,7 @@ public class Boardgame
     [Range(2018, 2023)]
     public int YearPublished { get; set; }
     [Required]
+    [EnumDataType(typeof(CategoryType))]
     public CategoryType CategoryType { get; set; }
     [Required] public string Mechanics { get; set; } = null!;
     public int CreatorId { get; set; }

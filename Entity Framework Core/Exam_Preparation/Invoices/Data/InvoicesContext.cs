@@ -14,11 +14,11 @@ namespace Invoices.Data
         { 
         }
 
-        public DbSet<Address> Addresses { get; set; }
-        public DbSet<Client> Clients { get; set; }
-        public DbSet<Invoice> Invoices { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<ProductClient> ProductsClients { get; set; }
+        public DbSet<Address> Addresses { get; set; } = null!;
+        public DbSet<Client> Clients { get; set; } = null!;
+        public DbSet<Invoice> Invoices { get; set; } = null!;
+        public DbSet<Product> Products { get; set; } = null!;
+        public DbSet<ProductClient> ProductsClients { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
