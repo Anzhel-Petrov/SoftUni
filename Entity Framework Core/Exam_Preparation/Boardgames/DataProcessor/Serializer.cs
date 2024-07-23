@@ -9,7 +9,26 @@ namespace Boardgames.DataProcessor
     {
         public static string ExportCreatorsWithTheirBoardgames(BoardgamesContext context)
         {
-            throw new NotImplementedException();
+            var creators = context.Creators
+                .Where(c => c.Boardgames.Any())
+                .Select(c => new ExportCreatorDto()
+                {
+                    BoardgamesCount = c.Boardgames.Count.ToString(),
+                    CreatorName = c.FirstName + ' ' + c.LastName,
+                    Boardgames = c.Boardgames
+                        .Select(bg => new ExportXmlBoardgameDto()
+                        {
+                            BoardgameName = bg.Name,
+                            BoardgameYearPublished = bg.YearPublished
+                        })
+                        .OrderBy(bg => bg.BoardgameName)
+                        .ToArray(),
+                })
+                .OrderByDescending(c => c.BoardgamesCount)
+                .ThenBy(c => c.CreatorName)
+                .ToArray();
+
+            return creators.SerializeToXml("Creators");
         }
 
         public static string ExportSellersWithMostBoardgames(BoardgamesContext context, int year, double rating)

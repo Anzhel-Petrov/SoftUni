@@ -160,6 +160,7 @@ namespace Invoices.DataProcessor
                     {
                         productToAdd.ProductsClients!.Add(new ProductClient()
                         {
+                            Product = productToAdd,
                             ClientId = clientId
                         });
                     }
