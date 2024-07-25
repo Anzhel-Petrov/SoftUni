@@ -6,7 +6,8 @@ public static class DataConstraints
     public const byte DistrictNameMinLength = 2;
     public const byte DistrictNameMaxLength = 80;
     public const byte PostalCodeLength = 8;
-    public const string DistrictPostalCodeRegexExpression = @"^[A-Z]{2}\-[0-9]{5}";
+    //public const string DistrictPostalCodeRegexExpression = @"^[A-Z]{2}\-[0-9]{5}";
+    public const string DistrictPostalCodeRegexExpression = @"^[A-Z]{2}-\d{5}$";
 
     //Property
     public const byte PropertyIdentifierMinLength = 16;

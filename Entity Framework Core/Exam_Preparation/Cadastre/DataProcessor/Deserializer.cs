@@ -27,8 +27,10 @@ namespace Cadastre.DataProcessor
                 xmlDocument.DeserializeFromXml<ImportDistrictDto[]>("Districts");
             List<District> validDistricts = new List<District>();
 
-            foreach (var districtDto in importDistrictDtos)    
+            foreach (var districtDto in importDistrictDtos)
             {
+                //bool isValidRegion = Enum.TryParse(districtDto.Region, ignoreCase: true, out Region validRegion);
+
                 if (!IsValid(districtDto) || dbContext.Districts.Any(d => d.Name == districtDto.Name))
                 {
                     sb.AppendLine(ErrorMessage);
@@ -39,7 +41,8 @@ namespace Cadastre.DataProcessor
                 {
                     Name = districtDto.Name,
                     PostalCode = districtDto.PostalCode,
-                    Region = districtDto.Region
+                    Region = (Region)Enum.Parse(typeof(Region), districtDto.Region)
+                    //Region = validRegion
                 };
 
                 foreach (var propertyDto in districtDto.Properties)
@@ -47,10 +50,12 @@ namespace Cadastre.DataProcessor
                     bool isValidDate = DateTime.TryParseExact(propertyDto.DateOfAcquisition, "dd/MM/yyyy", CultureInfo.InvariantCulture,
                         DateTimeStyles.None, out DateTime validDateOfAcquisition);
 
-                        
+
                     if (!IsValid(propertyDto)
                         || dbContext.Properties.Any(p => p.PropertyIdentifier == propertyDto.PropertyIdentifier)
-                        || dbContext.Properties.Any(p => p.Address == propertyDto.Address)
+                        || districtToAdd.Properties.Any(dp => dp.PropertyIdentifier == propertyDto.PropertyIdentifier)
+                        || dbContext.Properties.Any(p => p.Address == propertyDto.Address) 
+                        || districtToAdd.Properties.Any(dp => dp.Address == propertyDto.Address)
                         || !isValidDate)
                     {
                         sb.AppendLine(ErrorMessage);
@@ -78,7 +83,48 @@ namespace Cadastre.DataProcessor
 
         public static string ImportCitizens(CadastreContext dbContext, string jsonDocument)
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+            ImportCitizenDto[] citizenDtos = jsonDocument.DeserializeFromJson<ImportCitizenDto[]>();
+            List<Citizen> validCitizens = new List<Citizen>();
+
+            foreach (var citizenDto in citizenDtos)
+            {
+                bool isValidBirthDate = DateTime.TryParseExact(citizenDto.BirthDate, "dd-MM-yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime validBirthDate);
+                //bool isValidMaritalStatus = Enum.TryParse(citizenDto.MaritalStatus, ignoreCase: true,
+                //    out MaritalStatus validMaritalStatus);
+
+                if (!IsValid(citizenDto) || !isValidBirthDate)
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                Citizen citizenToAdd = new Citizen()
+                {
+                    FirstName = citizenDto.FirstName,
+                    LastName = citizenDto.LastName,
+                    BirthDate = validBirthDate,
+                    MaritalStatus = (MaritalStatus)Enum.Parse(typeof(MaritalStatus), citizenDto.MaritalStatus)
+                };
+
+                foreach (var propertyId in citizenDto.Properties)
+                {
+                    citizenToAdd.PropertiesCitizens.Add(new PropertyCitizen()
+                    {
+                        PropertyId = propertyId,
+                        Citizen = citizenToAdd
+                    });
+                }
+
+                validCitizens.Add(citizenToAdd);
+                sb.AppendLine(string.Format(SuccessfullyImportedCitizen, citizenToAdd.FirstName, citizenToAdd.LastName,
+                    citizenToAdd.PropertiesCitizens.Count));
+            }
+
+            dbContext.Citizens.AddRange(validCitizens);
+            dbContext.SaveChanges();
+
+            return sb.ToString().Trim();
         }
 
         private static bool IsValid(object dto)

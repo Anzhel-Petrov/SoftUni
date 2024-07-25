@@ -12,7 +12,7 @@ public class ImportDistrictDto
     [Required]
     [XmlAttribute(nameof(Region))]
     [EnumDataType(typeof(Region))]
-    public Region Region { get; set; }
+    public string Region { get; set; } = null!;
 
     [Required]
     [XmlElement(nameof(Name))]
