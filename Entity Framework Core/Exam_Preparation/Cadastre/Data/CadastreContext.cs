@@ -35,6 +35,10 @@ namespace Cadastre.Data
         {
             modelBuilder.Entity<PropertyCitizen>()
                 .HasKey(pc => new { pc.PropertyId, pc.CitizenId });
+
+            modelBuilder.Entity<Property>()
+                .Property(p => p.Area)
+                .HasPrecision(18, 2);
         }
     }
 }
