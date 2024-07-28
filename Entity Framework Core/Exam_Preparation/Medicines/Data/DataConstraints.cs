@@ -5,6 +5,7 @@ public static class DataConstraints
     public const byte PharmacyNameMinLength = 2;
     public const byte PharmacyNameMaxLength = 50;
     public const byte PharmacyPhoneLength = 14;
+    public const string PharmacyBooleanRegex = @"^(true|false)$";
     public const string PharmacyPhoneNumberRegex = @"^\([0-9]{3}\)\ [0-9]{3}\-[0-9]{4}$";
     // ^\(\d{3}\)\ \d{3}\-\d{4}$
 
