@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadastre", "Cadastre\Cadast
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Medicines", "Medicines\Medicines.csproj", "{A49EAF43-A9B7-4197-A768-EDCCBB18F402}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trucks", "Trucks\Trucks.csproj", "{9BE8F849-04B6-4CD6-AA2C-87EF8BE75719}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A49EAF43-A9B7-4197-A768-EDCCBB18F402}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A49EAF43-A9B7-4197-A768-EDCCBB18F402}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A49EAF43-A9B7-4197-A768-EDCCBB18F402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BE8F849-04B6-4CD6-AA2C-87EF8BE75719}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BE8F849-04B6-4CD6-AA2C-87EF8BE75719}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BE8F849-04B6-4CD6-AA2C-87EF8BE75719}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BE8F849-04B6-4CD6-AA2C-87EF8BE75719}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

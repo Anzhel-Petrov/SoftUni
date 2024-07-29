@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
+using System.Xml.Serialization;
 using static Medicines.Data.DataConstraints;
 
 namespace Medicines.DataProcessor.ExportDtos;

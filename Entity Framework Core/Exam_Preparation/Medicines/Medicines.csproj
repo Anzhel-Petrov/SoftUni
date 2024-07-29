@@ -24,10 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DataProcessor\ExportDtos\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\JSON_XML_Extensions\JSON_XML_Extensions.csproj" />
   </ItemGroup>
 
