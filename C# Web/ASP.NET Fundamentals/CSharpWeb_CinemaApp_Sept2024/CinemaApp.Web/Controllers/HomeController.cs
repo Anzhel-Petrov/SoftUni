@@ -1,6 +1,6 @@
-using CinemaApp.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using CinemaApp.Web.ViewModels;
 
 namespace CinemaApp.Web.Controllers
 {
