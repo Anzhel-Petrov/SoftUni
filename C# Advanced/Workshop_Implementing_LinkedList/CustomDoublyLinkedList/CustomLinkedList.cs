@@ -44,23 +44,65 @@ public class CustomLinkedList
         
         Count++;
     }
-
-    public Node RemoveFirst()
+    
+    public Node RemoveLast()
     {
-        Node oldHead = Head; 
-        Head = Head.Next;
-        Head.Previous = null;
-        oldHead.Next = null;
-        Count--;
+        if (Tail == null)
+        {
+            return null;
+        }
         
-        return oldHead;
-    }
-
-    public void RemoveLast()
-    {
         Node oldTail = Tail;
+        
+        if (Tail.Previous == null)
+        {
+            Head = null;
+            Tail = null;
+            Count = 0;
+            return oldTail;
+        }
+        
         Tail = Tail.Previous;
         Tail.Next = null;
         oldTail.Previous = null;
+        Count--;
+
+        return oldTail;
+    }
+
+    public Node RemoveFirst()
+    {
+        if (Head == null)
+        {
+            return null;
+        }
+    
+        Node oldHead = Head;
+
+        if (Head.Next == null) 
+        {
+            Head = null;
+            Tail = null;
+            Count = 0; 
+            return oldHead;
+        }
+        
+        Head = Head.Next;
+        Head.Previous = null;
+        oldHead.Next = null;
+        Count--; 
+    
+        return oldHead;
+    }
+
+    public int GetLength()
+    {
+        int count = 0;
+        for (Node cur = Head; cur != null; cur = cur.Next)
+        {
+            count++;
+        }
+
+        return count;
     }
 }

@@ -21,8 +21,13 @@ namespace CustomDoublyLinkedList
             
             customLinkedList.AddFirst(4);
             customLinkedList.AddFirst(3);
-
+            
+            customLinkedList.RemoveLast();
             customLinkedList.RemoveFirst();
+
+
+            Console.WriteLine($"Length of list is: {customLinkedList.GetLength()}");
+            Console.WriteLine($"Length of list is: {customLinkedList.Count}");
 
             // Console.WriteLine(customLinkedList.Head.Value);
             // Console.WriteLine(customLinkedList.Tail.Value);
