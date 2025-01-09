@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Channels;
 
 namespace CustomDoublyLinkedList
 {
@@ -24,6 +25,8 @@ namespace CustomDoublyLinkedList
             
             customLinkedList.RemoveLast();
             customLinkedList.RemoveFirst();
+            customLinkedList.PrintBackward();
+            customLinkedList.PrintForward();
 
 
             Console.WriteLine($"Length of list is: {customLinkedList.GetLength()}");
@@ -34,12 +37,18 @@ namespace CustomDoublyLinkedList
             // Console.WriteLine(customLinkedList.Tail.Previous);
             // Console.WriteLine(customLinkedList.Head.Next);
 
-            Node node = customLinkedList.Head;
-            while (node != null)
-            {
-                Console.WriteLine(node.Value);
-                node = node.Next;
-            }
+            // Node node = customLinkedList.Head;
+            // while (node != null)
+            // {
+            //     Console.WriteLine(node.Value);
+            //     node = node.Next;
+            // }
+            //
+            // Console.WriteLine();
+            //
+            customLinkedList.ForEach(n => Console.Write(n + " "), true);
+            Console.WriteLine();
+            Console.WriteLine(string.Join(", ", customLinkedList.ToArray()));
         }
     }
 }

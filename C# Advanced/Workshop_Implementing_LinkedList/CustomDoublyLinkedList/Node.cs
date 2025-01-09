@@ -5,6 +5,8 @@ public class Node
     public Node(int value)
     {
         this.Value = value;
+        Next = null;
+        Previous = null;
     }
     public int Value { get; set; }
     public Node? Next { get; set; }
