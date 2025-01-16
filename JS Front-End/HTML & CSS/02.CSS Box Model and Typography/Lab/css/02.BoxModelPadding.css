@@ -1,0 +1,18 @@
+div {
+    margin-bottom: 1em;
+    border: 2px solid black;
+}
+
+.uniform {
+  padding: 20px;
+}
+
+.non-uniform {
+  /* order is – top, right, bottom, left */
+  padding: 10px 30px 20px 40px;
+}
+
+.percentage {
+  /* in this scenario the % value is derived from the width of the element */
+  padding: 5%;
+}
