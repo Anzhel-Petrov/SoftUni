@@ -1,7 +1,7 @@
 section {
     border: 2px solid black;
-    padding: 1em 2em;
     margin-bottom: 2em;
+    padding: 1em;
   }
 
   section p {
@@ -9,14 +9,14 @@ section {
     padding: 1em;
   }
 
-  .block p {
+  section.block p {
     display: block;
   }
 
-  .inline p {
+  section.inline p {
     display: inline;
   }
 
-  .inline-block p {
+  section.inline-block p {
     display: inline-block;
   }
