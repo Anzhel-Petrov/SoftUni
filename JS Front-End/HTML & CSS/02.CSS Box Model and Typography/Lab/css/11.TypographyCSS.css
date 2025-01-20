@@ -1,0 +1,7 @@
+html {
+    font: 16px/1.5 Helvetica, sans-serif;
+}
+
+p, ul, ol {
+    padding-bottom: 1.5rem;
+}
