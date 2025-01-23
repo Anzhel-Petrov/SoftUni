@@ -2,6 +2,95 @@ html {
     font: 16px/1.5 Helvetica, sans-serif;
 }
 
+body {
+    padding: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-family: Georgia, serif;
+}
+
+blockquote {
+    padding-left: 1.5rem;
+    border-left: 5px solid rgb(0, 0, 0, 0.4);
+    font-style: italic;
+    margin: 0 3em; 
+    margin-bottom: 1.5rem;
+    /* above two rules are moree verbose but easy to understand as making it like this - margin: 0 2em 1.5rem 2em; */
+}
+
+/* to remove the p bottom padding */
+blockquote p:last-child {
+    padding-bottom: 0;
+}
+
+/* the footer class "author" - I am not using p so the above rule is not used */
+blockquote .author {
+    text-align: right;
+}
+
+table {
+    margin: 1.5rem 0;
+    /* border-spacing: 1px; */
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, table th, table td {
+    border: 1px solid #ccc;
+}
+
+table th, table td {
+    padding: 0.2em 1.2em;
+}
+
+table thead th {
+    background: #ddd;
+    text-align: left;
+}
+
+table tbody tr:nth-child(odd) td {
+    background: #eee;
+}
+
 p, ul, ol {
     padding-bottom: 1.5rem;
+}
+
+ul, ol {
+    padding: 0;
+    padding-left: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+ol, ul, dl {
+	margin: 0 0 1.5rem 0;
+}
+
+ul li, ol li {
+	list-style-position: inside;
+}
+
+ul ul {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+ul li {
+	list-style-type: square;
+}
+
+ul ul li {
+	list-style-type: disc;
+}
+
+ul ul ul li {
+	list-style-type: circle;
+}
+
+hr {
+    margin: 2em 0;
 }
