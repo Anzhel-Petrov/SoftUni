@@ -1,0 +1,27 @@
+.site {
+    background: #fff;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.1);
+    border-radius: 0.3em;
+    padding: 2em;
+    max-width: 60em;
+    margin: 0 auto;
+}
+
+.site-header,
+.content-main,
+.content-aside,
+.site-footer {
+    border: 2px solid #ccc;
+    border-radius: 0.3em;
+    padding: 1.5em 2em;
+}
+
+.site-content {
+    padding: 1em 0;
+    display: flex;
+    gap: 1em;
+}
+
+.content-main {
+    flex: 1 0 auto;
+}

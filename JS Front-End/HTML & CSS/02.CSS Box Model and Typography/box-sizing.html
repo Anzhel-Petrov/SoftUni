@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Sizing</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      [class^="box"] {
+        width: 300px;
+        height: 300px;
+        background: #ccc;
+        border: 20px solid #666;
+        margin: 40px;
+        padding: 40px;
+      }
+
+      .box1 {
+        box-sizing: content-box;
+      }
+
+      .box2 {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">Standard (Content Box)</div>
+    <div class="box2">Alternative (Border Box)</div>
+  </body>
+</html>
