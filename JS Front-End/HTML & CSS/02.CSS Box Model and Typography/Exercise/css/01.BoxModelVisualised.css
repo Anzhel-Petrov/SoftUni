@@ -1,0 +1,38 @@
+/* * {
+    outline: 1px solid red;
+} */
+
+div {
+    padding: 2em;
+    border: 1px dashed grey;
+    position: relative;
+}
+
+p {
+    position: absolute;
+    top: 0.3em;
+    left: 0.6em;
+    margin: 0;
+}
+
+.container {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.margin {
+    background-color: lightsalmon;
+}
+
+.border {
+    background-color: blanchedalmond;
+}
+
+.padding {
+    background-color: lightgreen;
+}
+
+.content {
+    background-color: lightblue;
+    text-align: center;
+}
