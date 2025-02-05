@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font: 16px/1.5 Verdana, sans-serif;
+}
+
+body, input {
+    font: inherit;
+}
+
+body {
+    background-color: #369;
+    color: white;
+    padding: 2em;
+    min-height: 100dvh;
+}
+
