@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font: 16px/1.5 Verdana, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body, input {
+    font: inherit;
+}
+
+body {
+    background-color: #369;
+    color: white;
+    padding: 2em;
+    min-height: 100dvh;
+}
+
+p, ul, ol {
+    padding-bottom: 1.5em;
+}
+
+ul, ol {
+    padding-left: 1.5em;
+    outline: 1px solid red;
+    /* padding-right: 2em;
+    margin-right: 5em; */
+}
+
+ul ul, ol ol, ol ul, ul ol {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}

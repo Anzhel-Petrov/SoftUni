@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 4em;
+      }
+
+      .flex-container {
+        border: 2px solid #666;
+        padding: 2em;
+        height: 600px;
+        display: flex;
+        overflow: hidden;
+        /* flex-wrap: wrap; */
+        align-items: flex-start;
+        gap: 1em;
+
+        /* align content works only when more than
+        one line and flex-wrap: wrap is set */
+        /* align-content: center; */
+
+        /* justify-content: space-evenly;
+        align-items: flex-end; */
+      }
+
+      .item {
+        border: 2px solid #000;
+        padding: 0.5em;
+        background: #eee;
+        flex-basis: 5em;
+        flex-grow: 1;
+        flex-shrink: 1;
+        /* flex-basis + shrink = max-width */
+        /* flex-basis + grow = min-width */
+        /* flex-basis + grow + shrink = new case */
+      }
+
+      .item.fi-2 {
+        flex-grow: 2;
+      }
+
+      .item.fi-3 {
+        flex-grow: 1;
+      }
+
+      .item.fi-5,
+      .item:nth-child(5) {
+        /* flex-grow: 1; */
+        background: lightblue;
+        /* align-self: flex-end; */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox</h1>
+    <div class="flex-container">
+      <div class="item fi-1">1</div>
+      <div class="item fi-2">2</div>
+      <div class="item fi-3">3</div>
+      <div class="item fi-4">4</div>
+      <div class="item fi-5">5</div>
+      <div class="item fi-6">6</div>
+      <div class="item fi-7">7</div>
+      <!-- <div class="item fi-8">8</div>
+      <div class="item fi-9">9</div>
+      <div class="item fi-10">10</div>
+      <div class="item fi-11">11</div>
+      <div class="item fi-12">12</div>
+      <div class="item fi-13">13</div> -->
+    </div>
+  </body>
+</html>
