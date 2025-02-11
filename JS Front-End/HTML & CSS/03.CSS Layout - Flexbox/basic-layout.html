@@ -3,7 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Layout</title>
+    <title>Basic Layout with Flexbox</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        font: 16px/1.5 Verdana, sans-serif;
+      }
+
+      body,
+      form,
+      input,
+      button {
+        font: inherit;
+      }
+
+      body {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      body > * {
+        padding: 2em;
+        border: 2px solid black;
+      }
+
+      header {
+        flex: 1 1 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2em;
+      }
+
+      nav ul li,
+      nav ul li a {
+        display: block;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+      }
+
+      footer {
+        flex: 1 1 100%;
+      }
+
+      main {
+        flex: 1 1 20ch;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Lazy blog</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Main section of the blog</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ad aspernatur iste facere aut vero, dolor possimus, unde corporis debitis error? Excepturi praesentium iure distinctio omnis error, ipsum dicta et!</p>
+    </main>
+
+    <aside>
+      <section>
+        <h4>Form</h4>
+        <form action="#">
+          <input type="text" />
+          <button>Search</button>
+        </form>
+      </section>
+      <section>
+        <h4>Archive</h4>
+        <ul>
+          <li><a href="#">Jan 2024</a></li>
+          <li><a href="#">Feb 2024</a></li>
+          <li><a href="#">Mar 2024</a></li>
+          <li><a href="#">Apr 2024</a></li>
+          <li><a href="#">May 2024</a></li>
+        </ul>
+      </section>
+    </aside>
+
+    <footer>
+      <p>All rights reserved &copy; 2000 - 2025 Lazy Stuff</p>
+    </footer>
+  </body>
 </html>

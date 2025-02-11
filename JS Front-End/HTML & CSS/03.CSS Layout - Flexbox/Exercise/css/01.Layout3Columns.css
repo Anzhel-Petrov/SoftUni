@@ -1,5 +1,5 @@
 .container {
-    max-width: 90ch;
+    max-width: 120ch;
     margin: 0 auto;
     background: #fff;
     padding: 2em;
@@ -35,4 +35,5 @@ header p {
 main {
     display: flex;
     gap: 2em;
+    padding: 1em 2em;
 }

@@ -1,0 +1,28 @@
+.container {
+    background: #fff;
+    border-radius: 0.3em;
+    margin: 2em auto;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+    margin: 1em;
+    padding: 0.2em;
+    display: flex;
+    max-width: 50dvw;
+    margin: 0 auto;
+}
+
+.days {
+    display: flex;
+}
+
+p {
+    flex-grow: 1;
+    border: 1px solid grey;
+    padding: 2em;
+    text-align: center;
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}

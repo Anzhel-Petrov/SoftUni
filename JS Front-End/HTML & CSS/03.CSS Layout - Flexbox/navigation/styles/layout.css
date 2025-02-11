@@ -1,0 +1,38 @@
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-content {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  body > header,
+  body > footer,
+  .site-content > main,
+  .site-content > aside {
+    padding: 2em;
+    border: 2px solid black;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  main {
+    flex: 1 1 70%;
+    padding-right: 2em;
+  }
+
+  aside {
+    flex: 1 1 30%;
+  }
+
+  aside ul{
+    list-style: none;
+  }

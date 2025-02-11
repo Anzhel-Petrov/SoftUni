@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Layout with Flexbox</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        /* outline: 1px solid red; */
+      }
+
+      html {
+        font: 16px/1.5 Verdana, sans-serif;
+      }
+
+      body,
+      form,
+      input,
+      button {
+        font: inherit;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100dvh;
+      }
+
+      body > header,
+      body > footer,
+      .site-content > main,
+      .site-content > aside {
+        padding: 2em;
+        border: 2px solid black;
+      }
+
+      .site-content {
+        flex-grow: 1;
+        display: flex;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      main {
+        /* 
+        flex short notation:
+        flex: 1 1 20ch
+        This means:
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 20ch; 
+        */
+        flex: 1 1 80%;
+        padding-right: 2em;
+      }
+
+      aside {
+        flex: 1 1 20%;
+      }
+
+      footer {
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2em;
+      }
+
+      nav ul li,
+      nav ul li a {
+        display: block;
+      }
+
+      nav ul li a {
+        border-radius: 0.3em;
+        padding: 0.5em 1em;
+        background: #eee;
+        text-decoration: none;
+      }
+
+      aside ul {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Lazy blog</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Archive</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="site-content">
+      <main>
+        <h2>Main section of the blog</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, ad aspernatur iste facere aut vero, dolor possimus, unde corporis debitis error? Excepturi praesentium iure distinctio omnis error, ipsum dicta et!</p>
+      </main>
+
+      <aside>
+        <section>
+          <h4>Form</h4>
+          <form action="#">
+            <input type="text" />
+            <button>Search</button>
+          </form>
+        </section>
+        <section>
+          <h4>Archive</h4>
+          <ul>
+            <li><a href="#">Jan 2024</a></li>
+            <li><a href="#">Feb 2024</a></li>
+            <li><a href="#">Mar 2024</a></li>
+            <li><a href="#">Apr 2024</a></li>
+            <li><a href="#">May 2024</a></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+    <footer>
+      <p>All rights reserved &copy; 2000 - 2025 Lazy Stuff</p>
+    </footer>
+  </body>
+</html>
