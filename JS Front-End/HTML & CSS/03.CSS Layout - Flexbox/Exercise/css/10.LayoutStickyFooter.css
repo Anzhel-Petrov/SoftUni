@@ -1,0 +1,17 @@
+body {
+    min-height: 100dvh;
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+body > * {
+    padding: 2em;
+    background: white;
+    border: 2px solid blue;
+}
+
+main {
+    flex-grow: 1;
+}

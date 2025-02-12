@@ -1,0 +1,31 @@
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.container {
+    max-width: 60ch;
+    background: white;
+    padding: 2em;
+    border-radius: 0.2em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+}
+
+.container article {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.container article ul {
+    padding-left: 1.5em;
+}
+
+
