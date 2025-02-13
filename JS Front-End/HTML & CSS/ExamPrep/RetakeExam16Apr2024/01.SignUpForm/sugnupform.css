@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+html {
+    font: 14px/1.5 Kode Mono, sans-serif;
+}
+
+body, input, textarea, table, button {
+    font: inherit;
+}
+
+body {
+    background: #C1BDBA;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+form {
+    color: inherit;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 750px;
+    background: #24333C;
+    padding: 4em;
+    border-radius: 0.3em;
+    box-shadow: 0 0 1em 0 rgb(0, 0, 0, 0.2);
+}
+
+.container h2 {
+    padding-bottom: 2rem;
+    text-align: center;
+    font-weight: normal;
+    font-size: 2em;
+}
+
+.buttons {
+    display: flex;
+    margin-bottom: 2em;
+}
+
+.buttons li{
+    display: block;
+    flex: 1 1 50%;
+}
+
+.buttons li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1em 2em;
+    text-align: center;
+    background: #364247;
+}
+
+.buttons li a.active{
+    background: #1AB188;
+}
+
+.buttons a:hover {
+    background: #127B5F;
+}
+
+.flex-row {
+    display: flex;
+    gap: 2em;
+}
+
+.flex-row .field {
+    flex: 1 1 auto;
+}
+
+.field {
+    position: relative;
+}
+
+.field label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.3em 0.5em;
+    color: #757A72;
+}
+
+.field input ~ label::after {
+    display: inline-block;
+    content: '*';
+    color: #158E6D;
+    padding-left: 0.2em;
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    border: 1px solid #808F8D;
+    background: transparent;
+    padding: 0.3em 0.5em;
+    line-height: 1;
+    outline: none;
+    margin-bottom: 2em;
+}
+
+input::placeholder {
+    display: inline-block;
+    content: '*';
+    color: #158E6D;
+    padding-left: 0.2em;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background: #158E6D;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5em;
+}
