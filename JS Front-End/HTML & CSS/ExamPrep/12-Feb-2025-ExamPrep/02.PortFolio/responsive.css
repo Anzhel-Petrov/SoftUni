@@ -1,1 +1,54 @@
+@media (width <= 600px) {
+    nav ul {
+        display: none;
+    }
 
+    nav .checkbtn {
+        display: block;
+        order: 1;
+    }
+
+    section.site-header > i, h1{
+        position: static;
+        text-align: initial;
+        bottom: initial;
+    }
+
+    section.site-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.about {
+        display: flex;
+        gap: 1em;
+    }
+
+    section.about .about-header {
+        width: auto;
+        text-align: initial;
+        position: static;
+        bottom: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.about .about-text {
+        width: auto;
+        margin: 0;
+        display: block;
+    }
+
+    section.about .about-header,
+    section.about .about-text {
+        flex: 1 1 50%;
+    }
+
+    .gallery {
+        text-align: center;
+    }
+}

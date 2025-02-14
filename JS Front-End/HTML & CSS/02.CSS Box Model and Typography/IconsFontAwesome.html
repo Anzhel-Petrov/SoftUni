@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Icons Font Awesome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  </head>
+  <body>
+    <!-- The <span> is inside the <i>, which is not valid HTML. <i> is meant for icons, not as a wrapper. -->
+    <ul class="option-1">
+      <li>
+        <a href="#">
+          <i class="fab fa-facebook-f"><span>Facebook</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fab fa-twitter"><span>Twitter</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fab fa-linkedin-in"><span>Linkedin</span></i>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fab fa-instagram"><span>Instagram</span></i>
+        </a>
+      </li>
+    </ul>
+
+    <!-- If you only want to show icons, there's no need for the <span>Facebook</span>. We can hide it. -->
+    <ul class="option-2">
+      <li>
+        <a href="#">
+          <i class="fab fa-facebook-f"></i>
+          <span>Facebook</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fab fa-twitter"></i>
+          <span>Twitter</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fab fa-linkedin-in"></i>
+          <span>Linkedin</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Best Approach: It keeps the markup clean and semantic – Only the <i> element (or <span> if preferred) is used inside the link. -->
+    <ul class="option-3">
+      <li>
+        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+      </li>
+
+      <li>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-brands fa-threads"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-solid fa-phone"></i></a>
+      </li>
+    </ul>
+
+    <!-- <span> is fine, but FontAwesome typically uses <i> for consistency.
+    This works but isn't the usual convention for icons. -->
+    <ul class="option-4">
+      <li>
+        <a href="#">
+          <span class="icon fa-brands fa-facebook"></span>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
