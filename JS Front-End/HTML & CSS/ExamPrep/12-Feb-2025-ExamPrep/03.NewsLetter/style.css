@@ -1,2 +1,293 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap');
+@import url(reset.css);
+@import url(typography.css);
+@import url(layout.css);
+
+.section.site-header .inner {
+    display: flex;
+    align-items: center;
+    /* top 4em left 0 bottom 2em right 0 */
+    padding: 4em 0 2em;
+}
+
+.section.site-header .inner nav {
+    margin-left: auto;
+}
+
+.section.site-header .inner nav ul {
+    display: flex;
+    gap: 2em;
+    padding-bottom: 0;
+}
+
+.section.site-header .inner nav a,
+.section.site-header .inner nav li{
+    display: block;
+}
+
+.section.site-header .inner nav a {
+    padding: 0.5em 1em;
+    color: #696969;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section.site-header .inner nav a.active {
+    background: #444444;
+    color: #fff;
+    border-radius: 0.3em;
+}
+
+.section.site-header .inner .site-title {
+    background: #57A390;
+    line-height: 1;
+    padding: 0.2rem 1rem;
+    border-radius: 0.3rem;
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Oleo Script', sans-serif;
+    font-weight: normal;
+}
+
+.section.site-header .inner .site-description {
+    font-weight: bold;
+}
+
+.section.site-header .inner .site-branding {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+.section.banner {
+    margin-bottom: 2em;
+}
+
+.section.banner .inner {
+    background: #fff;
+    border-radius: 0.5em;
+    padding: 4em;
+    display: flex;
+    gap: 4em;
+    align-items: center;
+}
+
+.section.banner .inner .text {
+    flex: 0 1 60%;
+}
+
+.section.banner .inner .text h2 {
+    font-size: 4em;
+    line-height: 1;
+    margin-bottom: 0.3em;
+}
+
+.section.banner .inner .text p {
+    font-size: 3em;
+    line-height: 1;
+    font-weight: 100;
+    padding: 0;
+}
+
+.section.banner .inner .buttons {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.section.banner .inner .buttons .button {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1;
+    background: #F2F2F2;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    color: #444444;
+    padding: 1.5rem 2.5rem;
+}
+
+.section.banner .inner .buttons .primary{
+    background: #0090C5;
+    color: #fff;
+}
+
+/* .section.banner .inner .text,
+.section.banner .inner .buttons{
+    flex: 1 1 50%;
+} */
+
+.section.cards {
+    margin-bottom: 3em;
+}
+
+.section.cards .inner {
+    display: flex;
+    gap: 2em;
+}
+
+.section.cards .inner .card {
+    border-radius: 0.5em;
+    overflow: hidden;
+    background: #fff;
+}
+
+.section.cards .inner .card .card-header {
+    /* top 2em left 2.5 bottom 0 right 2.5 */
+    padding: 3em 2.5em 0;
+}
+
+.section.cards .inner .card .card-content {
+    padding: 0 2.5em;
+    padding-bottom: 3em;
+}
+
+.section.cards .inner .card p {
+    line-height: 2;
+    font-weight: 100;
+    opacity: 0.7;
+}
+
+.section.cards .inner .card h3 {
+    font-size: 1.2em;
+}
+
+.section.call-to-action{
+    background: #fff;
+    margin-bottom: 4em;
+}
+
+.section.call-to-action .inner {
+    display: flex;
+    gap: 4em;
+    padding: 4em 0;
+}
+
+.section.call-to-action h3 {
+    font-size: 2em;
+    font-weight: 900;
+}
+
+.section.call-to-action h4 {
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.section.call-to-action .inner .aside {
+    flex: 0 0 30%;
+}
+
+.section.call-to-action .aside ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.section.call-to-action .inner .aside li{
+    flex: 1 1 40%;
+    display: block;
+    overflow: hidden;
+    border-radius: 0.4em;
+}
+
+.section.site-footer .inner .columns{
+    display: flex;
+    gap: 2em;
+}
+
+.section.call-to-action .inner .button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 0.4rem;
+    background: #0090C5;
+    padding: 1em 1.5em;
+}
+
+.section.call-to-action .inner .aside .button {
+    margin-top: 1em;
+}
+
+.section.call-to-action .inner .button span {
+    padding-left: 0.2em;
+}
+
+.section.call-to-action .inner .main p {
+    line-height: 2;
+    font-weight: 100;
+    opacity: 0.7;
+    text-align: justify;
+}
+
+.section.site-footer .inner .columns .column {
+    flex: 1 1 25%;
+}
+
+.section.site-footer .column a {
+    color: #444444;
+}
+
+.section.site-footer .column li{
+    display: block;
+} 
+
+.section.site-footer .column ul{
+    padding-left: 0;
+    line-height: 2;
+}
+
+.section.site-footer .column h6{
+    font-weight: 800;
+}
+
+.section.site-footer .column .socials{
+    display: flex;
+    gap: 0.5em;
+}
+
+.section.site-footer .column .socials li{
+    flex: 0 0 2.3em;
+    aspect-ratio: 1/1;
+    display: flex;
+    line-height: 1;
+}
+
+.section.site-footer .column .socials a{
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 0.2em;
+    /* padding: 0.25em; */
+    background: #444444;
+    color: #E5E4E4;
+    font-size: 1.5em;
+}
+
+.section.site-footer .inner > p:last-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* .section.site-footer .column .socials a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 0.2em;
+    width: 1.5em;
+    height: 1.5em;
+    background: #444444;
+    color: #E5E4E4;
+    font-size: 1.5em;
+} */
+

@@ -1,0 +1,22 @@
+html {
+    font-size: clamp(14px, 14px + 0.2vw, 18px);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+p, ul, ol {
+    padding-bottom: 1.5em;
+}
+
+ul, ol {
+    padding-left: 1.5em;
+}
+
+body, input, textarea, table, button {
+    font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}

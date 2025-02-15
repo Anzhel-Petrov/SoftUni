@@ -9,19 +9,19 @@
   <body>
     <header class="section site-header">
       <div class="inner">
-        <div class="site-title">NewsLetter</div>
-        <div class="site-description">by SoftUni</div>
+        <div class="site-branding">
+          <div class="site-title">NewsLetter</div>
+          <div class="site-description">by SoftUni</div>
+        </div>
+        <nav>
+          <ul>
+            <li><a class="active" href="#">Welcome</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <nav>
-        <ul>
-          <li><a href="#">Welcome</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-      </nav>
     </header>
 
     <section class="section banner">
@@ -32,8 +32,8 @@
         </div>
 
         <div class="buttons">
-          <a class="button-primary" href="#">Ok let's go</a>
-          <a class="button-secondary" href="#">More info</a>
+          <a class="button primary" href="#"><span>Ok let's go</span><i class="fa-solid fa-circle-arrow-right"></i></a>
+          <a class="button secondary" href="#"><span>More info</span><i class="fa-solid fa-circle-question"></i></a>
         </div>
       </div>
     </section>
@@ -42,18 +42,115 @@
       <div class="inner">
         <article class="card">
           <img src="images/html.jpg" alt="" />
-          <header class="card header">
+          <header class="card-header">
             <h3>Put something here</h3>
             <p>Maybe here as well I think</p>
           </header>
-          <section class="card content">
+          <section class="card-content">
+            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+          </section>
+        </article>
+        <article class="card">
+          <img src="images/css.jpg" alt="" />
+          <header class="card-header">
+            <h3>An interesting title</h3>
+            <p>This is also an interesting subtitle</p>
+          </header>
+          <section class="card-content">
+            <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
+          </section>
+        </article>
+        <article class="card">
+          <img src="images/html-css.jpg" alt="" />
+          <header class="card-header">
+            <h3>Oh, and finally ...</h3>
+            <p>Here's another intriguing subtitle</p>
+          </header>
+          <section class="card-content">
             <p>Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.</p>
           </section>
         </article>
       </div>
     </section>
-
-    An interesting title This is also an interesting subtitle Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla. Oh, and finally ... Here's another intriguing subtitle Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla. Interesting stuff More So what's this all about? This is NewsLetter, a simple HTML and CSS site designed as a task for students to recreate it from an image during their retake exam. Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis
-    lectus sit amet phasellus quam turpis. Continue Reading Random Stuff Etiam feugiat condimentum Aliquam imperdiet suscipit odio Sed porttitor cras in erat nec Felis varius pellentesque potenti Nullam scelerisque blandit leo Random Stuff Etiam feugiat condimentum Aliquam imperdiet suscipit odio Sed porttitor cras in erat nec Felis varius pellentesque potenti Nullam scelerisque blandit leo Random Stuff Etiam feugiat condimentum Aliquam imperdiet suscipit odio Sed porttitor cras in erat nec Felis varius pellentesque potenti Nullam scelerisque blandit leo Contact Us Fictional Address City, Postcode (359) 000 00 00 00 © NewsLetter
+    <section class="section call-to-action">
+      <div class="inner">
+        <div class="aside">
+          <h4>Interesting stuff</h4>
+          <ul>
+            <li><img src="images/pic04.jpg" alt="" /></li>
+            <li><img src="images/pic05.jpg" alt="" /></li>
+            <li><img src="images/pic06.jpg" alt="" /></li>
+            <li><img src="images/pic07.jpg" alt="" /></li>
+          </ul>
+          <a href="#" class="button"><i class="fa-regular fa-file-lines"></i><span>More</span></a>
+        </div>
+        <div class="main">
+          <h3>So what's this all about?</h3>
+          <p>This is NewsLetter, a simple HTML and CSS site designed as a task for students to recreate it from an image during their retake exam.</p>
+          <p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus. Praesent semper bibendum ipsum, et tristique augue fringilla eu. Vivamus id risus vel dolor auctor euismod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus mattis lectus sit amet phasellus quam turpis.</p>
+          <a href="#" class="button"><i class="fa-solid fa-circle-arrow-right"></i><span>Continue Reading</span></a>
+        </div>
+      </div>
+    </section>
+    <footer class="section site-footer">
+      <div class="inner">
+        <div class="columns">
+          <div class="column">
+            <h6>Random Stuff</h6>
+            <ul>
+              <li><a href="#">Etiam feugiat condimentum</a></li>
+              <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+              <li><a href="#">Sed porttitor cras in erat nec</a></li>
+              <li><a href="#">Felis varius pellentesque potenti</a></li>
+              <li><a href="#">Nullam scelerisque blandit leo</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h6>Random Stuff</h6>
+            <ul>
+              <li><a href="#">Etiam feugiat condimentum</a></li>
+              <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+              <li><a href="#">Sed porttitor cras in erat nec</a></li>
+              <li><a href="#">Felis varius pellentesque potenti</a></li>
+              <li><a href="#">Nullam scelerisque blandit leo</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h6>Random Stuff</h6>
+            <ul>
+              <li><a href="#">Etiam feugiat condimentum</a></li>
+              <li><a href="#">Aliquam imperdiet suscipit odio</a></li>
+              <li><a href="#">Sed porttitor cras in erat nec</a></li>
+              <li><a href="#">Felis varius pellentesque potenti</a></li>
+              <li><a href="#">Nullam scelerisque blandit leo</a></li>
+            </ul>
+          </div>
+          <div class="column">
+            <h6>Contact Us</h6>
+            <ul class="socials">
+              <li>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+              </li>
+            </ul>
+            <p>Fictional Address</p>
+            <p>City, Postcode</p>
+            <p>(359) 000 00 00 00</p>
+          </div>
+        </div>
+        <p>&copy; NewsLetter</p>
+      </div>
+    </footer>
   </body>
 </html>
