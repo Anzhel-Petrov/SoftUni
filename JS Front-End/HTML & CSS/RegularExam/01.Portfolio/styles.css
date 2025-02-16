@@ -72,12 +72,13 @@ header .nav-main li a {
   display: block;
   color: #8e8e8e;
   text-decoration: none;
+  font-size: 0.6em;
 }
 
 main {
   display: flex;
   align-items: center;
-  padding: 4em 6em;
+  padding: 3em 7em;
   gap: 4em;
 }
 
@@ -91,17 +92,18 @@ main {
 
 .content p {
   opacity: 0.5;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .content button {
   border: none;
   display: block;
-  padding: 1em 1.5em;
+  padding: 1em 3em;
   border-radius: 0.3em;
   background: #3f8e00;
   color: #fff;
-  text-indent: 0.5em;
+  font-size: 0.7em;
+  letter-spacing: 0.5px;
 }
 
 .media {
@@ -137,7 +139,7 @@ footer .companies .image {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 0 8em;
+  flex: 1 0 0;
   aspect-ratio: 3 / 1;
   border: 1px solid #525252;
   border-radius: 0.4em;
@@ -145,6 +147,6 @@ footer .companies .image {
 }
 
 footer .companies img {
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 50%;
+  max-height: 50%;
 }
