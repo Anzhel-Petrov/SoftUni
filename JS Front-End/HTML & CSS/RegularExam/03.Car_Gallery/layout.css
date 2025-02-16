@@ -1,0 +1,11 @@
+body {
+  /* top 4em left 0 bottom 2em right 0 */
+  /* padding: 4em 0 2em; */
+  background: #fff;
+}
+
+.section .inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}

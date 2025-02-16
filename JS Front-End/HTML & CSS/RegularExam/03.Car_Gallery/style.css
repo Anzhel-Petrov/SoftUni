@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+@import url(reset.css);
+@import url(typography.css);
+@import url(layout.css);
+
+.section .inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section.site-header {
+  background-image: linear-gradient(90deg, #ff7088, #f2b69d);
+  margin-bottom: 5em;
+  padding-bottom: 5em;
+}
+
+.section.site-header .navigation {
+  display: flex;
+  gap: 2em;
+  padding-left: 0;
+  padding: 1em 12em 0;
+}
+
+.section.site-header .navigation li:nth-child(2) {
+  margin-right: auto;
+}
+
+.section.site-header .inner .speacial-menu a {
+  display: inline;
+  width: 20%;
+  padding: 1em 2em;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 0.3em 0.3em;
+  border: 1px solid white;
+  border-top: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50%;
+  text-align: center;
+}
+
+.section.site-header .navigation li,
+.section.site-header .navigation a,
+.section.site-header .inner .speacial-menu a {
+  display: block;
+  text-decoration: none;
+  font-weight: lighter;
+  color: #fdf9ee;
+}
+
+.section.site-header .banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  color: #fff;
+}
+
+.section.site-header .banner .site-title {
+  font-size: 3em;
+  font-weight: lighter;
+  line-height: 1;
+  padding-top: 1em;
+}
+
+.section.site-header .banner .site-desc {
+  font-size: 1.5em;
+  font-weight: lighter;
+  line-height: 1;
+}
+
+.section.site-header .banner a {
+  border: none;
+  padding: 0.7em 2em;
+  background: none;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #f9d8cd;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.section.img-banner,
+.section.cars-again,
+.section.site-footer {
+  background: #f6f8fb;
+  border-top: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.section.img-banner .inner {
+  display: flex;
+  gap: 2em;
+  width: 100%;
+}
+
+.section.img-banner .inner img {
+  display: block;
+  width: 50%;
+  height: auto;
+  /* object-fit: cover; */
+}
+
+.section.car-card .inner {
+  display: flex;
+  gap: 4em;
+  width: 100%;
+}
+
+.section.car-card .inner .card {
+  flex: 1 1 50%;
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  /* text-align: left; */
+}
+
+.section.car-card .inner .card h3,
+.section.car-card .inner .card p {
+  font-size: 2em;
+  color: #52575c;
+  font-weight: 350;
+}
+
+.section.car-card .inner .card p {
+  font-size: 1em;
+}
+
+.section.car-card .inner .card a {
+  align-self: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #c2c7cc;
+  color: #c2c4c5;
+  border-radius: 0.4em;
+}
+
+.section.car-card {
+  margin-bottom: 5em;
+}
+
+.section.call-to-action {
+  background-image: url(images/promo.jpg);
+  background-size: cover;
+  padding: 6em;
+  text-align: center;
+}
+
+.section.call-to-action .inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.call-to-action .inner .wrapper {
+  display: flex;
+  gap: 2em;
+  border: 1px solid white;
+  border-radius: 0.3em;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.section.call-to-action .inner p {
+  font-size: 2em;
+  color: #fff;
+  font-weight: lighter;
+  padding-bottom: 0;
+}
+
+.section.call-to-action .inner a {
+  border: none;
+  padding: 0.7em 1.5em;
+  background: #fff;
+  color: #4c7f7a;
+  text-decoration: none;
+  border-radius: 0.3em;
+  font-weight: lighter;
+}
+
+.section.call-to-action {
+  margin-bottom: 5em;
+}
+
+.section.weirdest-cars .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section.weirdest-cars .inner h2 {
+  text-transform: uppercase;
+  color: #62696b;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.section.weirdest-cars .inner a {
+  align-self: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #c2c7cc;
+  color: #c2c4c5;
+  border-radius: 0.4em;
+  font-weight: lighter;
+}
+
+.section.weirdest-cars {
+  margin-bottom: 1em;
+}
+
+.section.cars-again .inner {
+  display: flex;
+  gap: 3em;
+  width: 100%;
+}
+
+.section.cars-again .inner img {
+  display: block;
+  width: 30%;
+  height: auto;
+  /* object-fit: cover; */
+}
+
+.section.cars-again {
+  margin-bottom: 6em;
+}
+
+.section.site-footer .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding-top: 4em;
+}
+
+.section.site-footer .inner h2 {
+  color: #62696b;
+  font-size: 2em;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+.section.site-footer .inner p {
+  color: #f35858;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.section.site-footer .inner hr {
+  margin-top: 3em;
+  width: 100%;
+  opacity: 0.3;
+}
+
+.section.site-footer .inner > p:last-child {
+  text-align: center;
+  font-size: 0.7em;
+  color: #d2d7dc;
+  padding-bottom: 6em;
+  padding-top: 3em;
+}
