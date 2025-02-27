@@ -20,9 +20,7 @@
 
 // solve('Peter');
 
-// function solve(num){
-//     console.log(num * 2)
-// }
+
 
 // function greeting(name){
 //     let greeting = `Hello, ${name}!`
@@ -33,11 +31,7 @@
 
 // greeting(myName);
 
-// function studentInformation(name, age, grade){
-//     console.log(`Name: ${name}, Age: ${age}, Grade: ${grade.toFixed(2)}`);
-// }
 
-// studentInformation('Steve', 16, 2.1426);
 
 // function isExcellentGrade(grade) {
 //     if(grade >= 5.50)
