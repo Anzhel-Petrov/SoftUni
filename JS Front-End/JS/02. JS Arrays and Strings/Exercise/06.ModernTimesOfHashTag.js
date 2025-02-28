@@ -11,14 +11,6 @@ function solve(text) {
             console.log(match[1]);
         }
     }
-
-    // let match = pattern.exec(text);
-
-    // while (match)
-    // {
-    //     console.log(match);
-    //     match = pattern.exec(text);
-    // }
 }
 
 // function solve(string) {
