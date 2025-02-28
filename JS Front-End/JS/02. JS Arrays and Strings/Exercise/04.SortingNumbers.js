@@ -26,29 +26,27 @@
 //     console.log(result);
 //   }
 
-function solve (myArr) {
-    let sorted = [];
-    myArr.sort((a, b) => a - b);
-    let start = 0;
-    let end = myArr.length - 1; 
-    for (let i=0; i< myArr.length ; i++){
-        if (i % 2 ==0 && start <= end) {
-            sorted.push(myArr[start]);
-            start++;
-        } else {
-            sorted.push(myArr[end]);
-            end--;
-        }
-    }
+// function solve (myArr) {
+//     let sorted = [];
+//     myArr.sort((a, b) => a - b);
+//     let start = 0;
+//     let end = myArr.length - 1; 
+//     for (let i=0; i< myArr.length ; i++){
+//         if (i % 2 ==0 && start <= end) {
+//             sorted.push(myArr[start]);
+//             start++;
+//         } else {
+//             sorted.push(myArr[end]);
+//             end--;
+//         }
+//     }
 
-    console.log(sorted);
-    // /for(let i=0;i< sorted.length ; i++){
-    //     console.log(sorted[i]);
-    // }/
+//     console.log(sorted);
+//     // /for(let i=0;i< sorted.length ; i++){
+//     //     console.log(sorted[i]);
+//     // }/
 
-}
-
-  console.log(solve([1, 2, 3, 4, 5]));
+// }
 
 // function sortNumbers(array) {
 //     array.sort((a, b) => a - b); // Sort numerically
@@ -65,3 +63,91 @@ function solve (myArr) {
 // }
 
 //sortNumbers([3, 2]);
+
+// function sortNumbers(array) {
+//     array.sort((a, b) => a - b);
+//     let result = [];
+//     let left = 0;
+//     let right = array.length - 1;
+
+//     while (left <= right) {
+//         result.push(array[left++]);
+//         if (left <= right) { 
+//             result.push(array[right--]);
+//         }
+//     }
+
+//     return result;
+// }
+
+// function solve (numbers) {
+//     numbers.sort((a, b) => a - b);
+//     let len = numbers.length;
+//     let result = [];
+ 
+//     for (i = 0; i < len; i++) {
+//         if (i % 2 == 0) {
+//             let num = numbers.shift();
+//             result.push(num);
+//         } else {
+//             let num = numbers.pop();
+//             result.push(num);
+//         }
+//     }
+ 
+//     return result;
+// }
+
+// function solve (myArr) {
+//     let sorted = [];
+//     myArr.sort((a, b) => a - b);
+//     let start = 0;  
+//     let end = myArr.length - 1; 
+//     for (let i=0; i< myArr.length ; i++){
+//         if (i % 2 ==0 && start <= end) {
+//             sorted.push(myArr[start]);
+//             start++;
+//         } else {
+//             sorted.push(myArr[end]);
+//             end--;
+//         }
+//     }
+ 
+//     return sorted;
+//     /*for(let i=0;i< sorted.length ; i++){
+//         console.log(sorted[i]);
+//     }*/
+ 
+// }
+
+// function solve(arr) {
+//     arr.sort((a,b) => a - b);
+
+//     let result = [];
+
+//     while (arr.length) {
+//         if (result.length % 2 == 0)
+//         {
+//             result.push(arr.shift());
+//         } else {
+//             result.push(arr.pop());
+//         }
+//     }
+
+//     return result;
+// }
+
+function solve(arr) {
+    arr.sort((a, b) => a - b);
+ 
+    let result = [];
+    while (arr.length) {
+        result.push(arr.shift());
+        if (arr.length) {
+            result.push(arr.pop());
+        }
+    }
+    return result;
+}
+
+console.log(solve([1, 65, 3, 52, 48, 63, 31, -3, 18, 56]));
