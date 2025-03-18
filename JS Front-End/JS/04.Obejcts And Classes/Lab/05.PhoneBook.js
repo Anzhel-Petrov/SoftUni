@@ -13,6 +13,10 @@
 //     for (let [n, v] of Object.entries(phoneBook)) {
 //         console.log(`${n} -> ${v}`);
 //     }
+
+//     for (let entry of Object.entries(phoneBook)) {
+//         console.log(`${entry[0]} -> ${entry[1]}`);
+//     }
 // }
 
 // function phoneBook(phoneBookArray) {
