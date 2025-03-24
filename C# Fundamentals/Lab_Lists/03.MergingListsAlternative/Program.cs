@@ -1,4 +1,4 @@
-﻿namespace _01.SumAdjacentEqualNumbersAlternative
+﻿namespace _03.MergingListsAlternative
 {
     internal class Program
     {
