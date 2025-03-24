@@ -15,7 +15,8 @@
                 }
                 else
                 {
-                    charCount.Add(c, 1);
+                    //charCount.Add(c, 1);
+                    charCount[c] = 1;
                 }
             }
 
