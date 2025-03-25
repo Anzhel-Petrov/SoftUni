@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let myHeading = document.createElement('h1');
+      myHeading.textContent = 'DOM manipulation demo';
+      document.body.appendChild(myHeading);
+
+      let myDiv = document.createElement('div');
+      let myPara = socument.createElement('p');
+
+      myPara.textContent = 'Hello there, created from script!';
+      myDiv.appendChild(myPara);
+
+      document.body.appendChild(myDiv);
+    </script>
+  </body>
+</html>

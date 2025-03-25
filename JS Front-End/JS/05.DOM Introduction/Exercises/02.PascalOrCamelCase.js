@@ -187,3 +187,17 @@ function solve() {
 //     document.getElementById('result').textContent = result;
    
 //   }
+
+// function solve() {
+//     let input = document.getElementById("text").value.toLowerCase();
+//     let currentCase = document.getElementById("naming-convention").value;
+//     let words = input.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1));
+   
+//     let result = currentCase === "Camel Case" 
+//       ? words[0].toLowerCase() + words.slice(1).join("") 
+//       : currentCase === "Pascal Case" 
+//       ? words.join("") 
+//       : "Error!";
+   
+//     document.getElementById("result").textContent = result;
+//   }

@@ -14,3 +14,13 @@ function editElement(elementReference, match, replacer) {
 //     const edited = content.replace(matcher, replacer);
 //     ref.textContent = edited;
 // }
+
+// function editElement(element, match, replacer) {
+//     let text = element.textContent;
+    
+//     while (text.includes(match)) {
+//         text = text.replace(match, replacer);
+//     }
+    
+//     element.textContent = text;
+// }
