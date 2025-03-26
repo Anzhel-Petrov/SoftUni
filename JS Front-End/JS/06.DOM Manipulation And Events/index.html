@@ -10,14 +10,14 @@
     <script>
       let myHeading = document.createElement('h1');
       myHeading.textContent = 'DOM manipulation demo';
+
       document.body.appendChild(myHeading);
 
       let myDiv = document.createElement('div');
-      let myPara = socument.createElement('p');
-
+      let myPara = document.createElement('p');
       myPara.textContent = 'Hello there, created from script!';
-      myDiv.appendChild(myPara);
 
+      myDiv.appendChild(myPara);
       document.body.appendChild(myDiv);
     </script>
   </body>
