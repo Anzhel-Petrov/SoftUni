@@ -36,17 +36,19 @@ function solve() {
 }
 
 // function solve() {
-//    let form = document.getElementById('task-input');
 //    let contentDiv = document.getElementById('content');
 //    //let button = document.querySelector('#task-input [type="submit"]');
 //    let button = document.querySelector('input[type="submit"]');
 //    let input = document.querySelector('#task-input [type="text"]').value
 //       .split(',')
 //       .map(i => i.trim());
-//    form.addEventListener('sumbit', (event) => {
+
+//    button.addEventListener('click', (event) => {
 //       event.preventDefault();
+//       showParagraphInAnElement(input);
 //    });
-//    button.onclick = (event) => {showParagraphInAnElement(input);
+
+//    //button.onclick = (event) => {showParagraphInAnElement(input);
 //    //button.addEventListener("click", () => showParagraphInAnElement(data));
 //    //button.addEventListener('click', showParagraphInAnElement(input));
 
@@ -59,7 +61,6 @@ function solve() {
 //          contentDiv.appendChild(div);
 //       }
 //    }
-// }
 // }
 
 // function solve() {
