@@ -12,7 +12,7 @@ function orderTracker() {
     let orderBtn = document.getElementById('order-btn');
     orderBtn.addEventListener('click', function (e) {
         e.preventDefault();
-        createOrder;
+        createOrder();
     })
 
     let editBtn = document.getElementById('edit-order');
