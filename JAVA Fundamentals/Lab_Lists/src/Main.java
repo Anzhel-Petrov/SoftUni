@@ -11,6 +11,6 @@ public class Main {
                 .toList();
 
         System.out.println(foor);
-        foor.forEach(System.out::println);
+        //foor.forEach(System.out::println);
     }
 }
